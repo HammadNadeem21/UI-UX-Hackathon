@@ -59,8 +59,12 @@ const config: Config = {
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
   			}
-  		}
-  	}
+  		},
+		  screens: {
+			xs: "555px",
+			ms:  "320px"
+		},
+  	},
   },
   plugins: [require("tailwindcss-animate")],
 };
