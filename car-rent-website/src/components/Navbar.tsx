@@ -15,9 +15,12 @@ import { IoNotifications } from "react-icons/io5";
 // Setting-Icons
 import { IoMdSettings } from "react-icons/io";
 
+
+// Avatar Component
+import { AvatarDemo } from "./Avatar";
+
 // Fonts
 import { Plus_Jakarta_Sans } from "next/font/google";
-import { AvatarDemo } from "./Avatar";
 const PlusJakartaSans = Plus_Jakarta_Sans({
   weight: "700",
   display: "swap",

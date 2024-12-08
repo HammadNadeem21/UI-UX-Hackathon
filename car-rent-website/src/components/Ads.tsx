@@ -21,7 +21,7 @@ const PlusJakartaSans500 = Plus_Jakarta_Sans({
 const Ads = () => {
   return (
     <section className="text-gray-600 body-font">
-      <div className="container lg:px-5 md:px-2 xs:px-4 px-8 py-24 mx-auto">
+      <div className="container lg:px-5 md:px-2 xs:px-4 px-8 py-16 mx-auto">
         <div className="grid md:grid-cols-2 grid-cols-1 xs:-m-4 -m-12">
           {/* Ad 1 */}
           <div className="xl:w-[640px] w-full p-4">
