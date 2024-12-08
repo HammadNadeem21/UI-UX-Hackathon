@@ -1,16 +1,15 @@
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
+import Ads from "@/components/Ads";
+
 
 export default function Home() {
   return (
    <div>
     
-    {/* Navbar */}
-    <Navbar/>
-<div className="w-full h-[200px] bg-slate-800"></div>
+   
+{/* Ads */}
+<Ads/>
 
-    {/* Footer */}
-    <Footer/>
+   
    </div>
   );
 }
