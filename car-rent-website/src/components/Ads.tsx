@@ -86,7 +86,7 @@ const Ads = () => {
               </div>
 
               <button
-                className={`${PlusJakartaSans600.className} text-[16px] text-white w-[122px] h-[44px] bg-[#3563E9] rounded-[4px] lg:mt-0 md:mt-[20px] xs:mt-[30px] mt-[35px] cursor-pointer`}
+                className={`${PlusJakartaSans600.className} text-[16px] text-white w-[122px] h-[44px] bg-[#54A6FF] rounded-[4px] lg:mt-0 md:mt-[20px] xs:mt-[30px] mt-[35px] cursor-pointer`}
               >
                 Rental Car
               </button>
