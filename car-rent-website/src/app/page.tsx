@@ -1,5 +1,6 @@
 import Ads from "@/components/Ads";
 import PickUp from "@/components/PickUp";
+import Popular from "@/components/Popular";
 
 
 export default function Home() {
@@ -12,7 +13,9 @@ export default function Home() {
 
 {/* Pick Up */}
 <PickUp/>
-   
+
+{/* Popular Cars */}
+   <Popular/>
    </div>
   );
 }

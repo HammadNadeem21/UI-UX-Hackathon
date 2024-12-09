@@ -4,9 +4,12 @@ import React from "react";
 import Image from "next/image";
 import Switch from "../../public/Switch.png";
 
+// Select components
+import { SelectDemo } from "./Select";
+
+
 // Font
 import { Plus_Jakarta_Sans } from "next/font/google";
-import { SelectDemo } from "./Select";
 const PlusJakartaSans = Plus_Jakarta_Sans({
   weight: "700",
   display: "swap",
