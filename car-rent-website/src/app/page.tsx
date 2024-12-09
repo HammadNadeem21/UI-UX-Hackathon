@@ -1,4 +1,6 @@
 import Ads from "@/components/Ads";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 import PickUp from "@/components/PickUp";
 import Popular from "@/components/Popular";
 import Recomended from "@/components/Recomended";
@@ -8,6 +10,7 @@ export default function Home() {
   return (
    <div>
     
+     
    
 {/* Ads */}
 <Ads/>
@@ -20,6 +23,8 @@ export default function Home() {
 
    {/* Recomended Cars */}
    <Recomended/>
+
+    
    </div>
   );
 }
