@@ -121,7 +121,7 @@
 //                 <h1
 //                   className={`${PlusJakartaSans700.className} w-[128px] text-[20px] text-[#1A202C]`}
 //                 >
-//                   Koenigsegg
+//                  Nissan GT - R
 //                 </h1>
 //                 <MdFavorite size={24} className="text-[#ED3F3F] mt-2" />
 //               </div>
@@ -194,7 +194,7 @@
 //                 <h1
 //                   className={`${PlusJakartaSans700.className} w-[128px] text-[20px] text-[#1A202C]`}
 //                 >
-//                   Koenigsegg
+//                 Rolls - Royce
 //                 </h1>
 //                 <MdFavorite size={24} className="text-[#ED3F3F] mt-2" />
 //               </div>
@@ -262,7 +262,7 @@
 //                 <h1
 //                   className={`${PlusJakartaSans700.className} w-[128px] text-[20px] text-[#1A202C]`}
 //                 >
-//                   Koenigsegg
+//                  Nissan GT - R
 //                 </h1>
 //                 <MdFavorite size={24} className="text-[#ED3F3F] mt-2" />
 //               </div>
@@ -339,6 +339,8 @@
 // export default Popular;
 
 
+
+
 "use client";
 
 import React from "react";
@@ -376,87 +378,250 @@ import { FaUserGroup } from "react-icons/fa6";
 const Popular = () => {
   return (
     <div>
-      <section className="bg-gray-50">
-        <div className="container px-4 py-12 mx-auto">
+      <section>
+        <div className="container px-4 py-24 mx-auto">
           {/* Header */}
           <div
-            className={`${PlusJakartaSans600.className} w-full mb-6 flex justify-between items-center`}
+            className={`${PlusJakartaSans600.className} w-full h-[30px] mb-5 flex justify-between`}
           >
-            <h1 className="text-[#90A3BF] text-base sm:text-lg">Popular Cars</h1>
-            <button className="text-[#3563E9] text-base sm:text-lg">View All</button>
+            <h1 className="text-[#90A3BF] text-[16px]">Popular Cars</h1>
+            <button className="text-[#3563E9] text-[16px]">View All</button>
           </div>
 
-          {/* Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {/* Card Component */}
-            {[first, NissanGtR1, rollsRoyal, NissanGtR1].map((image, index) => (
-              <div
-                key={index}
-                className="bg-white shadow-md rounded-lg p-4 flex flex-col justify-between"
+          {/* Cards Container */}
+          <div className="flex xl:flex-nowrap flex-wrap gap-6 justify-center">
+            {/* Card 1 */}
+            <div className="w-full md:w-[304px] p-4 bg-white rounded-lg shadow-lg">
+              <div className="flex justify-between items-center mb-4">
+                <h1
+                  className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}
+                >
+                  Koenigsegg
+                </h1>
+                <MdFavorite size={24} className="text-[#ED3F3F]" />
+              </div>
+              <h2
+                className={`${PlusJakartaSans500.className} text-[14px] text-[#90A3BF]`}
               >
-                {/* Title and Favorite */}
-                <div className="flex justify-between items-center mb-2">
-                  <h1
-                    className={`${PlusJakartaSans700.className} text-lg text-[#1A202C]`}
+                Sport
+              </h2>
+              <div className="w-full flex justify-center my-6">
+                <Image src={first} alt="Koenigsegg" height={300} width={300} className="w-[232px]" />
+              </div>
+              <div className="flex justify-between items-center mb-6">
+                <div className="flex items-center">
+                  <BsFillFuelPumpFill size={24} className="text-[#90A3BF]" />
+                  <p
+                    className={`${PlusJakartaSans500.className} text-[#90A3BF] text-[15px] ml-2`}
                   >
-                    Koenigsegg
-                  </h1>
-                  <MdFavorite size={24} className="text-[#ED3F3F]" />
+                    90L
+                  </p>
                 </div>
-
-                {/* Subtitle */}
-                <h2 className={`${PlusJakartaSans500.className} text-sm text-[#90A3BF] mb-6`}>
-                  Sport
-                </h2>
-
-                {/* Image */}
-                <div className="relative w-full h-40">
-                  <Image
-                    src={image}
-                    alt="Car"
-                    className="object-contain w-full h-full"
-                  />
-                </div>
-
-                {/* Features */}
-                <div className="flex justify-between items-center mt-6 gap-4">
-                  {/* Fuel */}
-                  <div className="flex items-center gap-2">
-                    <BsFillFuelPumpFill size={20} className="text-[#90A3BF]" />
-                    <h2 className={`${PlusJakartaSans500.className} text-sm text-[#90A3BF]`}>
-                      90L
-                    </h2>
-                  </div>
-                  {/* Manual */}
-                  <div className="flex items-center gap-2">
-                    <TbSteeringWheel size={20} className="text-[#90A3BF]" />
-                    <h2 className={`${PlusJakartaSans500.className} text-sm text-[#90A3BF]`}>
-                      Manual
-                    </h2>
-                  </div>
-                  {/* People */}
-                  <div className="flex items-center gap-2">
-                    <FaUserGroup size={20} className="text-[#90A3BF]" />
-                    <h2 className={`${PlusJakartaSans500.className} text-sm text-[#90A3BF]`}>
-                      2 People
-                    </h2>
-                  </div>
-                </div>
-
-                {/* Price & Button */}
-                <div className="flex justify-between items-center mt-8">
-                  <h1 className={`${PlusJakartaSans700.className} text-lg`}>
-                    $99.00{" "}
-                    <span className="text-sm text-[#90A3BF]">/ day</span>
-                  </h1>
-                  <button
-                    className={`${PlusJakartaSans600.className} text-sm sm:text-base px-4 py-2 bg-[#3563E9] text-white rounded`}
+                <div className="flex items-center">
+                  <TbSteeringWheel size={24} className="text-[#90A3BF]" />
+                  <p
+                    className={`${PlusJakartaSans500.className} text-[#90A3BF] text-[15px] ml-2`}
                   >
-                    Rent Now
-                  </button>
+                    Manual
+                  </p>
+                </div>
+                <div className="flex items-center">
+                  <FaUserGroup size={24} className="text-[#90A3BF]" />
+                  <p
+                    className={`${PlusJakartaSans500.className} text-[#90A3BF] text-[15px] ml-2`}
+                  >
+                    2 People
+                  </p>
                 </div>
               </div>
-            ))}
+              <div className="flex justify-between items-center">
+                <h1
+                  className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}
+                >
+                  $99.00/ <span className="text-[14px] text-[#90A3BF]">day</span>
+                </h1>
+                <button
+                  className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm`}
+                >
+                  Rent Now
+                </button>
+              </div>
+            </div>
+
+            {/* Card 2 */}
+            <div className="w-full md:w-[304px] p-4 bg-white rounded-lg shadow-lg">
+              <div className="flex justify-between items-center mb-4">
+                <h1
+                  className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}
+                >
+                  Nissan GT-R
+                </h1>
+                <MdFavorite size={24} className="text-[#ED3F3F]" />
+              </div>
+              <h2
+                className={`${PlusJakartaSans500.className} text-[14px] text-[#90A3BF]`}
+              >
+                Sport
+              </h2>
+              <div className="w-full flex justify-center my-6">
+                <Image src={NissanGtR1} alt="Nissan GT-R" height={300} width={300} className="w-[232px]" />
+              </div>
+              <div className="flex justify-between items-center mb-6">
+                <div className="flex items-center">
+                  <BsFillFuelPumpFill size={24} className="text-[#90A3BF]" />
+                  <p
+                    className={`${PlusJakartaSans500.className} text-[#90A3BF] text-[15px] ml-2`}
+                  >
+                    80L
+                  </p>
+                </div>
+                <div className="flex items-center">
+                  <TbSteeringWheel size={24} className="text-[#90A3BF]" />
+                  <p
+                    className={`${PlusJakartaSans500.className} text-[#90A3BF] text-[15px] ml-2`}
+                  >
+                    Manual
+                  </p>
+                </div>
+                <div className="flex items-center">
+                  <FaUserGroup size={24} className="text-[#90A3BF]" />
+                  <p
+                    className={`${PlusJakartaSans500.className} text-[#90A3BF] text-[15px] ml-2`}
+                  >
+                    2 People
+                  </p>
+                </div>
+              </div>
+              <div className="flex justify-between items-center">
+                <h1
+                  className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}
+                >
+                  $80.00/ <span className="text-[14px] text-[#90A3BF]">day</span>
+                </h1>
+                <button
+                  className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm`}
+                >
+                  Rent Now
+                </button>
+              </div>
+            </div>
+
+            {/* Card 3 */}
+            <div className="w-full md:w-[304px] p-4 bg-white rounded-lg shadow-lg">
+              <div className="flex justify-between items-center mb-4">
+                <h1
+                  className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}
+                >
+                  Rolls Royce
+                </h1>
+                <MdFavorite size={24} className="text-[#ED3F3F]" />
+              </div>
+              <h2
+                className={`${PlusJakartaSans500.className} text-[14px] text-[#90A3BF]`}
+              >
+                Sedan
+              </h2>
+              <div className="w-full flex justify-center my-6">
+                <Image src={rollsRoyal} alt="Rolls Royce" height={300} width={300} className="w-[232px]" />
+              </div>
+              <div className="flex justify-between items-center mb-6">
+                <div className="flex items-center">
+                  <BsFillFuelPumpFill size={24} className="text-[#90A3BF]" />
+                  <p
+                    className={`${PlusJakartaSans500.className} text-[#90A3BF] text-[15px] ml-2`}
+                  >
+                    85L
+                  </p>
+                </div>
+                <div className="flex items-center">
+                  <TbSteeringWheel size={24} className="text-[#90A3BF]" />
+                  <p
+                    className={`${PlusJakartaSans500.className} text-[#90A3BF] text-[15px] ml-2`}
+                  >
+                    Automatic
+                  </p>
+                </div>
+                <div className="flex items-center">
+                  <FaUserGroup size={24} className="text-[#90A3BF]" />
+                  <p
+                    className={`${PlusJakartaSans500.className} text-[#90A3BF] text-[15px] ml-2`}
+                  >
+                    4 People
+                  </p>
+                </div>
+              </div>
+              <div className="flex justify-between items-center">
+                <h1
+                  className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}
+                >
+                  $96.00/ <span className="text-[14px] text-[#90A3BF]">day</span>
+                </h1>
+                <button
+                  className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm`}
+                >
+                  Rent Now
+                </button>
+              </div>
+            </div>
+
+               {/* Card 4 */}
+               <div className="w-full md:w-[304px] p-4 bg-white rounded-lg shadow-lg">
+              <div className="flex justify-between items-center mb-4">
+                <h1
+                  className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}
+                >
+                  Nissan GT - R
+                </h1>
+                <MdFavorite size={24} className="text-[#ED3F3F]" />
+              </div>
+              <h2
+                className={`${PlusJakartaSans500.className} text-[14px] text-[#90A3BF]`}
+              >
+                Sport
+              </h2>
+              <div className="w-full flex justify-center my-6">
+                <Image src={NissanGtR1} alt="Rolls Royce" height={300} width={300} className="w-[232px]" />
+              </div>
+              <div className="flex justify-between items-center mb-6">
+                <div className="flex items-center">
+                  <BsFillFuelPumpFill size={24} className="text-[#90A3BF]" />
+                  <p
+                    className={`${PlusJakartaSans500.className} text-[#90A3BF] text-[15px] ml-2`}
+                  >
+                    85L
+                  </p>
+                </div>
+                <div className="flex items-center">
+                  <TbSteeringWheel size={24} className="text-[#90A3BF]" />
+                  <p
+                    className={`${PlusJakartaSans500.className} text-[#90A3BF] text-[15px] ml-2`}
+                  >
+                    Automatic
+                  </p>
+                </div>
+                <div className="flex items-center">
+                  <FaUserGroup size={24} className="text-[#90A3BF]" />
+                  <p
+                    className={`${PlusJakartaSans500.className} text-[#90A3BF] text-[15px] ml-2`}
+                  >
+                    4 People
+                  </p>
+                </div>
+              </div>
+              <div className="flex justify-between items-center">
+                <h1
+                  className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}
+                >
+                  $96.00/ <span className="text-[14px] text-[#90A3BF]">day</span>
+                </h1>
+                <button
+                  className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm`}
+                >
+                  Rent Now
+                </button>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -465,4 +630,5 @@ const Popular = () => {
 };
 
 export default Popular;
+
 
