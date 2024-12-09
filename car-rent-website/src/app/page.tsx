@@ -1,7 +1,7 @@
 import Ads from "@/components/Ads";
 import PickUp from "@/components/PickUp";
 import Popular from "@/components/Popular";
-import Recomend from "@/components/Recomend";
+import Recomended from "@/components/Recomended";
 
 
 export default function Home() {
@@ -19,7 +19,7 @@ export default function Home() {
    <Popular/>
 
    {/* Recomended Cars */}
-   <Recomend/>
+   <Recomended/>
    </div>
   );
 }
