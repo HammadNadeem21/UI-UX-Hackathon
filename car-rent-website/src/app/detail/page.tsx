@@ -275,9 +275,10 @@ const Detail = () => {
                           <p
                             className={`${PlusJakartaSans500.className} text-[18px] text-[#596780]`}
                           >
-                            NISMO has become the embodiment of Nissan's
+                            NISMO has become the embodiment of Nissan&apos;s
                             outstanding performance, inspired by the most
-                            unforgiving proving ground, the &quot;race track&quot;.
+                            unforgiving proving ground&#44;
+                            the &quot;race track&quot;.
                           </p>
                         </div>
 
