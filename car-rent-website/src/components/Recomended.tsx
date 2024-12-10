@@ -20,9 +20,6 @@ const PlusJakartaSans500 = Plus_Jakarta_Sans({
 
 // Images
 import Image from "next/image";
-import first from "../../public/popularCars/first.png";
-import NissanGtR1 from "../../public/popularCars/NissanGtR1.png";
-import rollsRoyal from "../../public/popularCars/rollsRoyal.png";
 import rush from '../../public/recomended/rush.png';
 import crv from '../../public/recomended/crv.png';
 import terios from '../../public/recomended/terios.png';

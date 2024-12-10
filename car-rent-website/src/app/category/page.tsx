@@ -1,3 +1,4 @@
+import { SelectRent } from "@/components/Select_rent";
 import { SliderDemo } from "@/components/Slider";
 import { SelectDemo } from "@/components/Select";
 
@@ -14,7 +15,7 @@ import { FaUserGroup } from "react-icons/fa6";
 
 // Font
 import { Plus_Jakarta_Sans } from "next/font/google";
-import { SelectRent } from "@/components/Select_rent";
+
 
 const PlusJakartaSans700 = Plus_Jakarta_Sans({
   weight: "700",
