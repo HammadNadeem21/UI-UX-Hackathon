@@ -7,6 +7,7 @@ import Ad2Image from "../../public/Ad2Image.png";
 
 // Fonts
 import { Plus_Jakarta_Sans } from "next/font/google";
+import Link from "next/link";
 const PlusJakartaSans600 = Plus_Jakarta_Sans({
   weight: "600",
   display: "swap",
@@ -51,7 +52,7 @@ const Ads = () => {
               <button
                 className={`${PlusJakartaSans600.className} text-[16px] text-white w-[122px] h-[44px] bg-[#3563E9] rounded-[4px] lg:mt-0 md:mt-[20px] xs:mt-[30px] mt-[35px] cursor-pointer`}
               >
-                Rental Car
+                <Link href={'/detail'}>Rental Car</Link>
               </button>
 
               <div className="xl:w-[406px] lg:w-[350px] h-[106px] lg:ml-[110px] md:ml-[0px] xs:ml-[110px] lg:mt-[-20px] md:mt-[10px] xs:mt-[-10px] mt-[30px] ml-[30px]">
