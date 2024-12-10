@@ -35,6 +35,7 @@ import { MdFavorite } from "react-icons/md";
 import { BsFillFuelPumpFill } from "react-icons/bs";
 import { TbSteeringWheel } from "react-icons/tb";
 import { FaUserGroup } from "react-icons/fa6";
+import Link from "next/link";
 
 const Recomended = () => {
   return (
@@ -377,7 +378,7 @@ const Recomended = () => {
 
       </div>
       <div className=" flex justify-center mt-[100px]">
-      <button className={`${PlusJakartaSans500.className} w-[156px] h-[44px] rounded-[4px] px-[20px] py-[10px] bg-[#3563E9] text-white text-[14px]`}>Show More</button>
+      <button className={`${PlusJakartaSans500.className} w-[156px] h-[44px] rounded-[4px] px-[20px] py-[10px] bg-[#3563E9] text-white text-[14px]`}><Link href={'/category'}>Show more cars</Link></button>
       </div>
     </section>
     </div>

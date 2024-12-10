@@ -109,7 +109,7 @@ export default function carRent() {
               </div>
             </div>
 
-            <div className="w-[176px] h-[302px] ml-5">
+            <div className="w-[176px] h-[212px] ml-5">
               <h1
                 className={`${PlusJakartaSans600.className} text-[12px] text-[#90A3BF]`}
               >
@@ -159,7 +159,7 @@ export default function carRent() {
               </div>
             </div>
 
-            <div className="ml-5">
+            <div className="ml-5 mt-0">
               <h1
                 className={`${PlusJakartaSans600.className} text-[12px] text-[#90A3BF]`}
               >
