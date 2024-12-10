@@ -277,7 +277,7 @@ const Detail = () => {
                           >
                             NISMO has become the embodiment of Nissan's
                             outstanding performance, inspired by the most
-                            unforgiving proving ground, the "race track".
+                            unforgiving proving ground, the &quot;race track&quot;.
                           </p>
                         </div>
 
