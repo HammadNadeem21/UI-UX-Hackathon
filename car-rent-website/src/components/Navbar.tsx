@@ -21,6 +21,7 @@ import { AvatarDemo } from "./Avatar";
 
 // Fonts
 import { Plus_Jakarta_Sans } from "next/font/google";
+import Link from "next/link";
 const PlusJakartaSans = Plus_Jakarta_Sans({
   weight: "700",
   display: "swap",
@@ -39,7 +40,10 @@ const Navbar = () => {
               MORENT
             </h1>
             <div className="xs:hidden cursor-pointer">
+              <Link href={'/admin'}>
               <AvatarDemo />
+              
+              </Link>
             </div>
           </div>
 
@@ -87,7 +91,10 @@ const Navbar = () => {
           </div>
           {/* Avatar */}
           <div className="md:ml-0 ml-[30px] xs:block hidden cursor-pointer">
-            <AvatarDemo />
+          <Link href={'/admin'}>
+              <AvatarDemo />
+              
+              </Link>
           </div>
         </div>
       </div>
