@@ -41,12 +41,142 @@ const Admin = () => {
 
         {/* Sidebar (Start) */}
 <div className='bg-blue-200 py-6 px-8'>
-<div className='bg-white w-[240px] h-[644px] '>
+
+<div className='bg-white w-[240px] h-[750px] '>
 <h1 className={`${PlusJakartaSans600.className} text-[12px] text-[#94A7CB66]`}>M A I N  M E N U</h1>    
 
-<div className='w-[132px] h-[28px] bg-slate-300'>
-<AiFillHome/>
+
+
+{/* Dashboard */}
+<div className="w-[200px] h-[45px] flex items-center mt-5 rounded-[10px] cursor-pointer group hover:bg-[#3563E9]">
+  <AiFillHome
+    size={24}
+    className="text-[#90A3BF] ml-3 group-hover:text-white"
+  />
+  <h1
+    className={`${PlusJakartaSans500.className} text-[16px] text-[#90A3BF] ml-3 group-hover:text-white`}
+  >
+    Dashboard
+  </h1>
 </div>
+
+
+{/* Car-Rent */}
+<div className="w-[200px] h-[45px] flex items-center mt-5 rounded-[10px] cursor-pointer group hover:bg-[#3563E9]">
+  <FaCarAlt
+    size={24}
+    className="text-[#90A3BF] ml-3 group-hover:text-white"
+  />
+  <h1
+    className={`${PlusJakartaSans500.className} text-[16px] text-[#90A3BF] ml-3 group-hover:text-white`}
+  >
+    Car Rent
+  </h1>
+</div>
+
+
+
+{/* Insight */}
+<div className="w-[200px] h-[45px] flex items-center mt-5 rounded-[10px] cursor-pointer group hover:bg-[#3563E9]">
+  <MdSignalCellularAlt
+    size={24}
+    className="text-[#90A3BF] ml-3 group-hover:text-white"
+  />
+  <h1
+    className={`${PlusJakartaSans500.className} text-[16px] text-[#90A3BF] ml-3 group-hover:text-white`}
+  >
+    Insight
+  </h1>
+</div>
+
+
+{/* Reimburse */}
+<div className="w-[200px] h-[45px] flex items-center mt-5 rounded-[10px] cursor-pointer group hover:bg-[#3563E9]">
+  <RiPriceTag2Fill
+    size={24}
+    className="text-[#90A3BF] ml-3 group-hover:text-white"
+  />
+  <h1
+    className={`${PlusJakartaSans500.className} text-[16px] text-[#90A3BF] ml-3 group-hover:text-white`}
+  >
+    Reimburse
+  </h1>
+</div>
+
+
+{/*Inbox */}
+<div className="w-[200px] h-[45px] flex items-center mt-5 rounded-[10px] cursor-pointer group hover:bg-[#3563E9]">
+  <LuMessageSquareMore
+    size={24}
+    className="text-[#90A3BF] ml-3 group-hover:text-white"
+  />
+  <h1
+    className={`${PlusJakartaSans500.className} text-[16px] text-[#90A3BF] ml-3 group-hover:text-white`}
+  >
+    Inbox
+  </h1>
+</div>
+
+
+{/* Calender */}
+<div className="w-[200px] h-[45px] flex items-center mt-5 rounded-[10px] cursor-pointer group hover:bg-[#3563E9]">
+  <BiSolidCalendar
+    size={24}
+    className="text-[#90A3BF] ml-3 group-hover:text-white"
+  />
+  <h1
+    className={`${PlusJakartaSans500.className} text-[16px] text-[#90A3BF] ml-3 group-hover:text-white`}
+  >
+   Calender
+  </h1>
+</div>
+
+
+<h1 className={`${PlusJakartaSans600.className} text-[12px] text-[#94A7CB66] mt-5`}>P R E F E R E N C E S</h1>
+
+{/* Setting */}
+<div className="w-[200px] h-[45px] flex items-center mt-5 rounded-[10px] cursor-pointer group hover:bg-[#3563E9]">
+  <RiSettingsFill
+    size={24}
+    className="text-[#90A3BF] ml-3 group-hover:text-white"
+  />
+  <h1
+    className={`${PlusJakartaSans500.className} text-[16px] text-[#90A3BF] ml-3 group-hover:text-white`}
+  >
+   Setting
+  </h1>
+</div>
+
+
+{/*Help & Center */}
+<div className="w-[200px] h-[45px] flex items-center mt-5 rounded-[10px] cursor-pointer group hover:bg-[#3563E9]">
+  <MdErrorOutline
+    size={24}
+    className="text-[#90A3BF] ml-3 group-hover:text-white"
+  />
+  <h1
+    className={`${PlusJakartaSans500.className} text-[16px] text-[#90A3BF] ml-3 group-hover:text-white`}
+  >
+   Help & Center
+  </h1>
+</div>
+
+
+{/* Dark Mode */}
+<div className="w-[150px] h-[45px] flex items-center mt-5 rounded-[10px] cursor-pointer group hover:bg-[#3563E9]">
+  <CgDarkMode
+    size={24}
+    className="text-[#90A3BF] ml-3 group-hover:text-white"
+  />
+  <h1
+    className={`${PlusJakartaSans500.className} text-[16px] text-[#90A3BF] ml-3 group-hover:text-white`}
+  >
+   Dark Mode
+  </h1>
+</div>
+
+
+
 
 </div>
 </div>
