@@ -124,47 +124,47 @@ import {
 const chartData = [
   {
     month: "January",
-    desktop: 1260,
-    mobile: 570,
-    tablet: 400,
-    smartTv: 300,
-    others: 150,
+    Sport_Car: 17439,
+    SUV: 9478,
+    Coupe: 18197,
+    Hatchback: 12510,
+    MPV: 14406,
   },
 ];
 
 const chartConfig = {
-  desktop: {
-    label: "Desktop",
+  Sport_Car: {
+    label: "Sport_Car",
     color: "hsl(var(--chart-1))",
   },
-  mobile: {
-    label: "Mobile",
+  SUV: {
+    label: "SUV",
     color: "hsl(var(--chart-2))",
   },
-  tablet: {
-    label: "Tablet",
+  Coupe: {
+    label: "Coupe",
     color: "hsl(var(--chart-3))",
   },
-  smartTv: {
-    label: "Smart TV",
+  Hatchback: {
+    label: "Hatchback",
     color: "hsl(var(--chart-4))",
   },
-  others: {
-    label: "Others",
+  MPV: {
+    label: "MPV",
     color: "hsl(var(--chart-5))",
   },
 } satisfies ChartConfig;
 
 export function Component() {
   const totalVisitors =
-    chartData[0].desktop +
-    chartData[0].mobile +
-    chartData[0].tablet +
-    chartData[0].smartTv +
-    chartData[0].others;
+    chartData[0].Sport_Car +
+    chartData[0].SUV +
+    chartData[0].Coupe +
+    chartData[0].Hatchback +
+    chartData[0].MPV;
 
   return (
-    <div className="bg-white h-[220px] w-[220px]">
+    <div className="bg-transparent h-[220px] w-[220px] mt-4">
       <CardContent className="flex items-center pb-0">
         <ChartContainer
           config={chartConfig}
@@ -196,9 +196,9 @@ export function Component() {
                         <tspan
                           x={viewBox.cx}
                           y={(viewBox.cy || 0) + 4}
-                          className="fill-muted-foreground"
+                          className="fill-muted-foreground text-[#90A3BF] text-[14px]"
                         >
-                          Visitors
+                          Rental Car
                         </tspan>
                       </text>
                     );
@@ -208,38 +208,38 @@ export function Component() {
             </PolarRadiusAxis>
             {/* Bars for each section */}
             <RadialBar
-              dataKey="desktop"
+              dataKey="Sport_Car"
               stackId="a"
               cornerRadius={5}
-              fill="var(--color-desktop)"
+              fill="#0D3559"
               className="stroke-transparent stroke-2"
             />
             <RadialBar
-              dataKey="mobile"
+              dataKey="SUV"
               stackId="a"
               cornerRadius={5}
-              fill="var(--color-mobile)"
+              fill="#175D9C"
               className="stroke-transparent stroke-2"
             />
             <RadialBar
-              dataKey="tablet"
+              dataKey="Coupe"
               stackId="a"
               cornerRadius={5}
-              fill="var(--color-tablet)"
+              fill="#2185DE"
               className="stroke-transparent stroke-2"
             />
             <RadialBar
-              dataKey="smartTv"
+              dataKey="Hatchback"
               stackId="a"
               cornerRadius={5}
-              fill="var(--color-smartTv)"
+              fill="#63A9E8"
               className="stroke-transparent stroke-2"
             />
             <RadialBar
-              dataKey="others"
+              dataKey="MPV"
               stackId="a"
               cornerRadius={5}
-              fill="var(--color-others)"
+              fill="#A6CEF2"
               className="stroke-transparent stroke-2"
             />
           </RadialBarChart>

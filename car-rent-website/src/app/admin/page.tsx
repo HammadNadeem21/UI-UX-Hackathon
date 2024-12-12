@@ -19,6 +19,11 @@ import { SwitchDemo } from "@/components/Switch";
 import Image from "next/image";
 import Maps from "../../../public/Admin/Maps.png";
 import View1 from "../../../public/Admin/View1.png";
+import NissanGtR1 from '../../../public/Admin/NissanGtR1.png'
+import first from '../../../public/Admin/first.png'
+import crv from '../../../public/Admin/crv.png'
+import rollsRoyal from '../../../public/Admin/rollsRoyal.png'
+
 
 // Font
 import { Plus_Jakarta_Sans } from "next/font/google";
@@ -185,7 +190,7 @@ const Admin = () => {
         {/* Sidebar (End) */}
 
         {/* Detail Rental Card */}
-        <div className="bg-blue-400 h-[807px] py-[13px] px-5">
+        <div className="h-[807px] py-[13px] px-5">
           <div className="w-[464px] h-[780px] bg-white rounded-[10px] px-[15px] py-[10px]">
             <div className="w-[434px] h-[760px] ">
               <h1
@@ -211,7 +216,7 @@ const Admin = () => {
                     alt="car"
                     height={300}
                     width={300}
-                    className="w-[102px] h-[68px]"
+                    className="w-[92px] h-[68px]"
                   />
 
                   <div className=" py-2">
@@ -352,22 +357,179 @@ const Admin = () => {
 
 
 {/* chart */}
-        <div className="bg-blue-600 h-[807px] py-[13px] px-5">
+        <div className="h-[807px] py-[13px] px-5">
 
-          <div className="rounded-[10px] px-[15px] pt-[10px] w-[464px] h-[300px] bg-purple-300">
+          <div className="rounded-[10px] px-[15px] pt-[10px] w-[464px] h-[300px] bg-white">
           <h1
                 className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}
               >
                 Top 5 Car Rental
               </h1>
 
-              <div>
+{/* Chart */}
+              <div className="flex">
                 <Component/>
+
+                <div className="w-full h-[220px]  mt-4">
+
+{/* Sport Car */}
+                  <div className="w-full h-1/5  flex items-center">
+                  <div className="h-[15px] w-[15px] bg-[#0D3559] rounded-full"></div>
+                  <h1 className={`${PlusJakartaSans600.className} text-[14px] text-[#90A3BF] ml-2`}>Sports Cars</h1>
+
+                  <h2 className={`${PlusJakartaSans600.className} text-[14px] text-[#1A202C] ml-[60px]`}>17,439</h2>
+                  </div>
+
+{/* SUV */}
+                  <div className="w-full h-1/5  flex items-center">
+                  <div className="h-[15px] w-[15px] bg-[#175D9C] rounded-full"></div>
+                  <h1 className={`${PlusJakartaSans600.className} text-[14px] text-[#90A3BF] ml-2`}>SUV</h1>
+
+                  <h2 className={`${PlusJakartaSans600.className} text-[14px] text-[#1A202C] ml-[115px]`}>9,478</h2></div>
+
+                  {/* Coupe */}
+                  <div className="w-full h-1/5  flex items-center">
+                  <div className="h-[15px] w-[15px] bg-[#2185DE] rounded-full"></div>
+                  <h1 className={`${PlusJakartaSans600.className} text-[14px] text-[#90A3BF] ml-2`}>Coupe</h1>
+
+                  <h2 className={`${PlusJakartaSans600.className} text-[14px] text-[#1A202C] ml-[95px]`}>18,197</h2>
+                  </div>
+
+                  {/* Hatchback */}
+                  <div className="w-full h-1/5  flex items-center">
+                  <div className="h-[15px] w-[15px] bg-[#63A9E8] rounded-full"></div>
+                  <h1 className={`${PlusJakartaSans600.className} text-[14px] text-[#90A3BF] ml-2`}>Hatchback</h1>
+
+                  <h2 className={`${PlusJakartaSans600.className} text-[14px] text-[#1A202C] ml-[65px]`}>12,510</h2>
+                  </div>
+
+                  {/* MPV */}
+                  <div className="w-full h-1/5  flex items-center">
+                  <div className="h-[15px] w-[15px] bg-[#A6CEF2] rounded-full"></div>
+                  <h1 className={`${PlusJakartaSans600.className} text-[14px] text-[#90A3BF] ml-2`}>MPV</h1>
+
+                  <h2 className={`${PlusJakartaSans600.className} text-[14px] text-[#1A202C] ml-[105px]`}>14,406</h2>
+                  </div>
+                </div>
               </div>
           </div>
 
 
+{/* Recent Transaction (Start) */}
+
+          <div className="w-[464px] h-[450px] bg-white rounded-[10px] px-[15px] mt-[30px] py-5">
+
+          <h1
+                className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}
+              >
+                Recent Transaction
+              </h1>
+
+
+<div className="w-[416px] h-[356px] mt-4">
+
+
+{/* Car 1 */}
+<div className="w-full h-1/4 flex justify-between border-[#C3D4E966] border-b-2">
+  
+  {/* Car name */}
+  <div className="w-[60%] flex justify-between items-center">
+<Image src={NissanGtR1} alt="Nissan" height={300} width={300} className="h-[40px] w-[112px]"/>
+<div>
+  <h1 className={`${PlusJakartaSans700.className} text-[16px] text-[#1A202C]`}>Nissan Gt - R</h1>
+  <h2 className={`${PlusJakartaSans500.className} text-[12px] text-[#90A3BF] mt-1`}>Sport Car</h2>
+</div>
+</div>
+
+{/* Car price */}
+<div className="w-[30%] py-5 text-right">
+    <h2 className={`${PlusJakartaSans500.className} text-[12px] text-[#90A3BF]`}>20 July</h2>
+    <h1 className={`${PlusJakartaSans700.className} text-[16px] text-[#1A202C] mt-1`}>$80.00</h1>
+  </div>
+  
+  </div>
+
+
+{/* Car 2 */}
+
+  <div className="w-full h-1/4 flex justify-between border-[#C3D4E966] border-b-2">
+  
+  {/* Car name */}
+  <div className="w-[60%] flex justify-between items-center">
+<Image src={first} alt="Koegnigsegg" height={300} width={300} className="h-[40px] w-[112px]"/>
+<div>
+  <h1 className={`${PlusJakartaSans700.className} text-[16px] text-[#1A202C]`}>Koegnigsegg</h1>
+  <h2 className={`${PlusJakartaSans500.className} text-[12px] text-[#90A3BF] mt-1`}>Sport Car</h2>
+</div>
+</div>
+
+{/* Car price */}
+<div className="w-[30%] py-5 text-right">
+    <h2 className={`${PlusJakartaSans500.className} text-[12px] text-[#90A3BF]`}>19 July</h2>
+    <h1 className={`${PlusJakartaSans700.className} text-[16px] text-[#1A202C] mt-1`}>$99.00</h1>
+  </div>
+  
+  </div>
+
+
+
+{/* Car 3 */}
+
+  <div className="w-full h-1/4 flex justify-between border-[#C3D4E966] border-b-2">
+  
+  {/* Car name */}
+  <div className="w-[60%] flex justify-between items-center">
+<Image src={rollsRoyal} alt="Rolls - Royce" height={300} width={300} className="h-[40px] w-[112px]"/>
+<div>
+  <h1 className={`${PlusJakartaSans700.className} text-[16px] text-[#1A202C]`}>Rolls - Royce</h1>
+  <h2 className={`${PlusJakartaSans500.className} text-[12px] text-[#90A3BF] mt-1`}>Sport Car</h2>
+</div>
+</div>
+
+{/* Car price */}
+<div className="w-[30%] py-5 text-right">
+    <h2 className={`${PlusJakartaSans500.className} text-[12px] text-[#90A3BF]`}>18 July</h2>
+    <h1 className={`${PlusJakartaSans700.className} text-[16px] text-[#1A202C] mt-1`}>$96.00</h1>
+  </div>
+  
+  </div>
+
+
+{/* Car - 4 */}
+  <div className="w-full h-1/4 flex justify-between">
+  
+  {/* Car name */}
+  <div className="w-[60%] flex justify-between items-center">
+<Image src={crv} alt="CR - V" height={300} width={300} className="h-[40px] w-[112px]"/>
+<div>
+  <h1 className={`${PlusJakartaSans700.className} text-[16px] text-[#1A202C]`}>CR - V</h1>
+  <h2 className={`${PlusJakartaSans500.className} text-[12px] text-[#90A3BF] mt-1`}>SUV</h2>
+</div>
+</div>
+
+{/* Car price */}
+<div className="w-[30%] py-5 text-right">
+    <h2 className={`${PlusJakartaSans500.className} text-[12px] text-[#90A3BF]`}>17 July</h2>
+    <h1 className={`${PlusJakartaSans700.className} text-[16px] text-[#1A202C] mt-1`}>$80.00</h1>
+  </div>
+  
+  </div>
+
+
+
+</div>
+{/* Recent Transaction (End) */}
+
+
+          </div>
+
+
+
+
         </div>
+
+
+
 
 
       </div>

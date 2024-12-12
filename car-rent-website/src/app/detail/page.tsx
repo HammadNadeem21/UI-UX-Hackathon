@@ -188,7 +188,7 @@ const Detail = () => {
           {/* Detail (Start) */}
           <div>
             <section className="text-gray-600 body-font">
-              <div className="container px-5 py-24 mx-auto flex flex-wrap">
+              <div className="container px-5 py-5 mx-auto flex flex-wrap">
                 <div className="flex flex-wrap md:-m-2 -m-1">
                   <div className="flex flex-wrap w-1/2">
                     <div className="md:p-2 p-1 w-full">
@@ -364,11 +364,13 @@ const Detail = () => {
                           </div>
 
                           <div className="w-[200px] bg-white flex items-center justify-end">
+                          <Link href={'/detail/payment'}>
                             <button
                               className={`${PlusJakartaSans700} text-[16px] bg-[#3563E9] w-[140px] h-[56px] text-white rounded-[4px] mr-2`}
                             >
-                             <Link href={'/detail/payment'}> Rent Now</Link>
+                              Rent Now
                             </button>
+                            </Link>
                           </div>
                         </div>
                       </div>

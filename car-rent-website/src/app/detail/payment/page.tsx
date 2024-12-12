@@ -38,7 +38,8 @@ const Payment = () => {
   return (
     <div>
       <div className="flex">
-        <div className="w-[70%] bg-slate-300 px-[50px] py-5">
+        {/* Billing Info (Start) */}
+        <div className="w-[70%] px-[50px] py-5">
           <div className="bg-white rounded-lg w-[852px] h-[336px] px-5 py-5">
             <div className="w-full h-[48px]  flex justify-between">
               <div className="w-[192px]">
@@ -73,7 +74,7 @@ const Payment = () => {
                 <input
                   type="text"
                   placeholder="Your name"
-                  className={`${PlusJakartaSans500.className} text-[14px] text-[#90A3BF] w-full h-[56px] bg-[#F6F7F9] rounded-[10px] mt-4 focus:outline-none focus:ring-0`}
+                  className={`${PlusJakartaSans500.className} text-[14px] text-[#90A3BF] w-full h-[56px] bg-[#F6F7F9] rounded-[10px] mt-4 focus:outline-none focus:ring-0 px-6`}
                 />
               </div>
 
@@ -88,7 +89,7 @@ const Payment = () => {
                 <input
                   type="text"
                   placeholder="Phone number"
-                  className={`${PlusJakartaSans500.className} text-[14px] text-[#90A3BF] w-full h-[56px] bg-[#F6F7F9] rounded-[10px] mt-4 focus:outline-none focus:ring-0`}
+                  className={`${PlusJakartaSans500.className} text-[14px] text-[#90A3BF] w-full h-[56px] bg-[#F6F7F9] rounded-[10px] mt-4 focus:outline-none focus:ring-0 px-6`}
                 />
               </div>
 
@@ -103,7 +104,7 @@ const Payment = () => {
                 <input
                   type="text"
                   placeholder="Address"
-                  className={`${PlusJakartaSans500.className} text-[14px] text-[#90A3BF] w-full h-[56px] bg-[#F6F7F9] rounded-[10px] mt-4 focus:outline-none focus:ring-0`}
+                  className={`${PlusJakartaSans500.className} text-[14px] text-[#90A3BF] w-full h-[56px] bg-[#F6F7F9] rounded-[10px] mt-4 focus:outline-none focus:ring-0 px-6`}
                 />
               </div>
 
@@ -118,7 +119,7 @@ const Payment = () => {
                 <input
                   type="text"
                   placeholder="Town or City"
-                  className={`${PlusJakartaSans500.className} text-[14px] text-[#90A3BF] w-full h-[56px] bg-[#F6F7F9] rounded-[10px] mt-4 focus:outline-none focus:ring-0`}
+                  className={`${PlusJakartaSans500.className} text-[14px] text-[#90A3BF] w-full h-[56px] bg-[#F6F7F9] rounded-[10px] mt-4 focus:outline-none focus:ring-0 px-6`}
                 />
               </div>
             </div>
@@ -167,7 +168,7 @@ const Payment = () => {
                   >
                     Locaions
                   </h1>
-                  <SelectPay name="Select Your City" />
+                  <SelectPay name="Select Your City" opt1="10 December" opt2="20 December" opt3="30 December"/>
                 </div>
 
                 {/* Date */}
@@ -178,7 +179,7 @@ const Payment = () => {
                     Date
                   </h1>
 
-                  <SelectPay name="Select your date" />
+                  <SelectPay name="Select your date" opt1="10 December" opt2="20 December" opt3="30 December"/>
                 </div>
 
                 {/* Time */}
@@ -189,7 +190,7 @@ const Payment = () => {
                     Time
                   </h1>
 
-                  <SelectPay name="Select your time" />
+                  <SelectPay name="Select your time" opt1="8:00 am" opt2="4:00 pm" opt3="8:00 pm"/>
                 </div>
               </div>
             </div>
@@ -214,7 +215,7 @@ const Payment = () => {
                   >
                     Locaions
                   </h1>
-                  <SelectPay name="Select Your City" />
+                  <SelectPay name="Select Your City" opt1="Karachi" opt2="Lahore" opt3="Quetta" />
                 </div>
 
                 {/* Date */}
@@ -225,7 +226,7 @@ const Payment = () => {
                     Date
                   </h1>
 
-                  <SelectPay name="Select your date" />
+                  <SelectPay name="Select your date" opt1="10 December" opt2="20 December" opt3="30 December" />
                 </div>
 
                 {/* Time */}
@@ -236,7 +237,7 @@ const Payment = () => {
                     Time
                   </h1>
 
-                  <SelectPay name="Select your time" />
+                  <SelectPay name="Select your time" opt1="8:00 am" opt2="4:00 pm" opt3="8:00 pm" />
                 </div>
               </div>
             </div>
@@ -296,7 +297,7 @@ const Payment = () => {
                   <input
                     type="text"
                     placeholder="Card number"
-                    className={`${PlusJakartaSans500.className} text-[14px] text-[#90A3BF] w-[90%] h-[56px] bg-white rounded-[10px] mt-4 focus:outline-none focus:ring-0 placeholder:pl-5`}
+                    className={`${PlusJakartaSans500.className} text-[14px] text-[#90A3BF] w-[90%] h-[56px] bg-white rounded-[10px] mt-4 focus:outline-none focus:ring-0 focus:border-none px-6`}
                   />
                 </div>
 
@@ -311,7 +312,7 @@ const Payment = () => {
                   <input
                     type="text"
                     placeholder="DD/MM/YY"
-                    className={`${PlusJakartaSans500.className} text-[14px] text-[#90A3BF] w-[90%] h-[56px] bg-white rounded-[10px] mt-4 focus:outline-none focus:ring-0 placeholder:pl-5`}
+                    className={`${PlusJakartaSans500.className} text-[14px] text-[#90A3BF] w-[90%] h-[56px] bg-white rounded-[10px] mt-4 focus:outline-none focus:ring-0 px-6`}
                   />
                 </div>
 
@@ -326,7 +327,7 @@ const Payment = () => {
                   <input
                     type="text"
                     placeholder="Card holder"
-                    className={`${PlusJakartaSans500.className} text-[14px] text-[#90A3BF] w-[90%] h-[56px] bg-white rounded-[10px] mt-4 focus:outline-none focus:ring-0 placeholder:pl-5`}
+                    className={`${PlusJakartaSans500.className} text-[14px] text-[#90A3BF] w-[90%] h-[56px] bg-white rounded-[10px] mt-4 focus:outline-none focus:ring-0 px-6`}
                   />
                 </div>
 
@@ -341,7 +342,7 @@ const Payment = () => {
                   <input
                     type="text"
                     placeholder="CVC"
-                    className={`${PlusJakartaSans500.className} text-[14px] text-[#90A3BF] w-[90%] h-[56px] bg-white rounded-[10px] mt-4 focus:outline-none focus:ring-0 placeholder:pl-5`}
+                    className={`${PlusJakartaSans500.className} text-[14px] text-[#90A3BF] w-[90%] h-[56px] bg-white rounded-[10px] mt-4 focus:outline-none focus:ring-0 px-6`}
                   />
                 </div>
               </div>
@@ -464,21 +465,24 @@ const Payment = () => {
           </div>
         </div>
 
-        <div className="w-[30%] bg-slate-700 px-4 py-5">
 
-            <div className="w-[372px] h-[560px] bg-white py-5 px-3 ">
+{/* Left-Side-(Start) */}
+        <div className="w-[30%] px-4 py-5">
+
+{/* Rental summary */}
+            <div className="w-[372px] h-[560px] bg-white rounded-[10px] py-5 px-3 ">
 
                 <div>
                     <h1 className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}>Rental Summary</h1>
                     <p className={`${PlusJakartaSans500.className} text-[14px] text-[#90A3BF]`}>Prices may change depending on the length of the rental and the price of your rental car.</p>
                 </div>
 
-                <div className="w-full h-[108px] bg-slate-300 flex mt-4">
+                <div className="w-full h-[108px] flex items-center mt-4">
                     <div>
 <Image src={view1} alt="view"/>
                     </div>
 
-                    <div className="w-[200px] h-[72px] bg-green-300">
+                    <div className="w-[200px] h-[72px] ml-2">
                         <h1 className={`${PlusJakartaSans700.className} text-[28px] text-[#1A202C]`}>Nissan GT - R</h1>
 
                         <div className="flex">
@@ -496,8 +500,49 @@ const Payment = () => {
                           </div>
                     </div>
                 </div>
+
+{/* Line */}
+<div className="w-full h-[2px] bg-[#C3D4E966] mt-[40px]"></div>
+
+
+{/* Subtotal */}
+<div className="mt-[40px] flex justify-between"> 
+  <h1 className={`${PlusJakartaSans500.className} text-[#90A3BF] text-[16px]`}>Subtotal</h1>
+  <h2 className={`${PlusJakartaSans600.className} text-[#1A202C] text-[16px]`}>$80.00</h2>
+</div>
+
+
+{/* Tax */}
+<div className="mt-[40px] flex justify-between"> 
+  <h1 className={`${PlusJakartaSans500.className} text-[#90A3BF] text-[16px]`}>Tax</h1>
+  <h2 className={`${PlusJakartaSans600.className} text-[#1A202C] text-[16px]`}>$0</h2>
+</div>
+
+
+{/* promo-code */}
+<div className="w-full h-[56px] bg-[#F6F7F9] rounded-[10px] mt-[30px] py-4 px-5 flex justify-between">
+  <input type="text" className="w-[150px] bg-transparent focus:outline-none focus:border-none" placeholder="Apply promo code"/>
+  <h1 className={`${PlusJakartaSans600.className} text-[#1A202C] text-[16px]`}>Apply now</h1>
+</div>
+
+
+{/* Price */}
+<div className="w-full h-[48px] mt-6 flex justify-between">
+  <div className="w-[70%]">
+    <h1 className={`${PlusJakartaSans700.className} text-[#1A202C] text-[18px]`}>Total Rental Price</h1>
+    <h2 className={`${PlusJakartaSans500.className} text-[#90A3BF] text-[12px]`}>Overall price and includes rental discount</h2>
+  </div>
+  <div className="w-[30%] flex items-center">
+      <h1 className={`${PlusJakartaSans700.className} text-[#1A202C] text-[26px]`}>$80.00</h1>
+  </div>
+</div>
+
+
             </div>
         </div>
+
+{/* Left-Side-(End) */}
+
       </div>
     </div>
   );
