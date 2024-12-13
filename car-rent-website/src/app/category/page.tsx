@@ -2,7 +2,6 @@
 import { SelectRent } from "@/components/Select_rent";
 
 import { SliderDemo } from "@/components/Slider";
-import React, { useState } from "react";
 
 
 // Image
@@ -48,12 +47,6 @@ const PlusJakartaSans600 = Plus_Jakarta_Sans({
 export default function carRent() {
 
 
-
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-  const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
 
 
   return (
