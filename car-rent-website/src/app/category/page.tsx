@@ -44,7 +44,7 @@ const PlusJakartaSans600 = Plus_Jakarta_Sans({
   subsets: ["latin"],
 });
 
-export default function carRent() {
+export default function Category() {
 
 
 
