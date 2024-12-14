@@ -2,6 +2,8 @@ import React from "react";
 
 // components
 import { SliderDemo } from "@/components/Slider";
+import Navbar from "@/components/Navbar";
+import MobileSidebar from "@/components/MobileSidebar";
 
 // Images
 import Image from "next/image";
@@ -43,9 +45,16 @@ const PlusJakartaSans600 = Plus_Jakarta_Sans({
 const Detail = () => {
   return (
     <div>
-      <div className="flex">
-        {/* sidebar */}
-        <div className="w-[25%]">
+      {/* Mobile Sidebar (Start) */}
+      <div className="md:hidden block">
+        <MobileSidebar />
+      </div>
+      {/* Mobile Sidebar (End) */}
+      {/* Navbar */}
+      <Navbar />
+      <div className="grid md:grid-cols-[25%,75%] grid-cols-1">
+        {/* sidebar (Start) */}
+        <div className="w-full md:block hidden">
           <div className="bg-white h-full py-5 px-3 mt-3">
             <div className="w-[176px] h-[302px] ml-5 mt-5">
               <h1
@@ -182,32 +191,34 @@ const Detail = () => {
             </div>
           </div>
         </div>
+        {/* sidebar (End) */}
 
         {/* Dashboard */}
-        <div className="w-[75%]">
+        <div className="w-full">
           {/* Detail (Start) */}
           <div>
             <section className="text-gray-600 body-font">
-              <div className="container px-5 py-5 mx-auto flex flex-wrap">
-                <div className="flex flex-wrap md:-m-2 -m-1">
-                  <div className="flex flex-wrap w-1/2">
+              <div className="container xs:px-4 py-5 mx-auto flex flex-wrap">
+                <div className="grid lg:grid-cols-2 grid-cols-1">
+                  {/* Right */}
+                  <div className="flex flex-wrap w-full">
                     <div className="md:p-2 p-1 w-full">
                       <div className="bg-[url(/Ad1.jpeg)] bg-cover h-[360px] p-6 rounded-lg ">
                         <div
                           className="xl:w-[284px] lg:w-[240px] xl:h-[200px] lg:h-[180px]
               xs:h-[150px] h-[120px] text-white"
                         >
-                          <div className="w-[350px] h-[50px]">
+                          <div className="w-full h-[50px]">
                             <h1
-                              className={`${PlusJakartaSans600.className} md:text-[26px]  text-[22px]`}
+                              className={`${PlusJakartaSans600.className} xl:text-[26px] lg:text-[20px]  xs:text-[30px] text-[20px]`}
                             >
                               Sports car with the best design and acceleration
                             </h1>
                           </div>
 
-                          <div className="w-[284px] lg:h-[48px] mt-[100px]">
+                          <div className="w-full lg:h-[48px] xl:mt-[100px] mt-[50px]">
                             <p
-                              className={`${PlusJakartaSans500.className} text-[16px]`}
+                              className={`${PlusJakartaSans500.className} lg:text-[16px] xs:text-[18px] text-[14px]`}
                             >
                               Safety and comfort while driving a futuristic and
                               elegant sports car
@@ -215,7 +226,7 @@ const Detail = () => {
                           </div>
                         </div>
 
-                        <div className="w-[350px] h-[106px] mt-[20px] ml-[30px]">
+                        <div className="w-full h-[106px] xs:mt-[20px] mt-[90px] xs:ml-[30px] ml-0">
                           <Image src={Ad1Image} alt="Ad1-Img" />
                         </div>
                       </div>
@@ -246,10 +257,10 @@ const Detail = () => {
                   </div>
 
                   {/* Left */}
-                  <div className="flex flex-wrap w-1/2">
+                  <div className="flex flex-wrap w-full">
                     <div className="md:p-2 p-1 w-full">
                       <div className="w-full h-full object-cover object-center py-5 px-5 block bg-white rounded-lg">
-                        <div className="w-[220px] h-[72px] ">
+                        <div className="w-full h-[72px] ">
                           <h1
                             className={`${PlusJakartaSans700.className} text-[32px] text-[#1A202C]`}
                           >
@@ -271,20 +282,22 @@ const Detail = () => {
                           </div>
                         </div>
 
-                        <div className="w-[444px] h-[100px] mt-8">
+                        <div className="w-full h-[100px] mt-8">
                           <p
-                            className={`${PlusJakartaSans500.className} text-[18px] text-[#596780]`}
+                            className={`${PlusJakartaSans500.className} xs:text-[18px] text-[15px] text-[#596780]`}
                           >
                             NISMO has become the embodiment of Nissan&apos;s
                             outstanding performance, inspired by the most
-                            unforgiving proving ground&#44;
-                            the &quot;race track&quot;.
+                            unforgiving proving ground&#44; the &quot;race
+                            track&quot;.
                           </p>
                         </div>
 
                         {/* Type */}
-                        <div className="w-[444px] h-[72px]  mt-[60px] flex">
-                          <div className="w-[222px] h-[72px]">
+                     
+
+                        <div className="w-full xs:mt-[60px] grid xl:grid-cols-2 lg:grid-cols-1 xs:grid-cols-2 grid-cols-1  mt-[80px]" >
+                          <div className="w-full">
                             <div className="w-[200px] h-[30px] flex justify-between">
                               <h2
                                 className={`${PlusJakartaSans500} text-[18px] text-[#90A3BF]`}
@@ -297,11 +310,12 @@ const Detail = () => {
                                 Sport
                               </h2>
                             </div>
-                            <div className="w-[200px] h-[30px] mt-3 flex justify-between">
+
+                            <div className="w-[200px] h-[30px] flex justify-between">
                               <h2
                                 className={`${PlusJakartaSans500} text-[18px] text-[#90A3BF]`}
                               >
-                                Steering{" "}
+                                Steering
                               </h2>
                               <h2
                                 className={`${PlusJakartaSans600} text-[20px] text-[#596780]`}
@@ -311,44 +325,45 @@ const Detail = () => {
                             </div>
                           </div>
 
-                          <div className="w-[222px] h-[72px]">
+                          <div className="w-full h-auto xl:mt-0 lg:mt-3 xs:mt-0 mt-3">
                             <div className="w-[200px] h-[30px] flex justify-between">
                               <h2
                                 className={`${PlusJakartaSans500} text-[18px] text-[#90A3BF]`}
                               >
-                                Type Car
+                                Capicity
                               </h2>
                               <h2
                                 className={`${PlusJakartaSans600} text-[20px] text-[#596780]`}
                               >
-                                Sport
+                                2 Person
                               </h2>
                             </div>
-                            <div className="w-[200px] h-[30px] mt-3 flex justify-between">
+
+                            <div className="w-[200px] h-[30px] flex justify-between">
                               <h2
                                 className={`${PlusJakartaSans500} text-[18px] text-[#90A3BF]`}
                               >
-                                Steering{" "}
+                                Gasoline
                               </h2>
                               <h2
                                 className={`${PlusJakartaSans600} text-[20px] text-[#596780]`}
                               >
-                                Manual
+                                70L
                               </h2>
                             </div>
                           </div>
                         </div>
 
                         {/* Price */}
-                        <div className="w-ful h-[56px] flex justify-between mt-[70px]">
+                        <div className="w-full h-[56px] flex justify-between mt-[35px]">
                           <div className="w-[200px]">
                             <div>
                               <h1
-                                className={`${PlusJakartaSans700.className} text-[25px] text-black`}
+                                className={`${PlusJakartaSans700.className} xs:text-[25px] text-[20px] text-black`}
                               >
                                 $80.00/{" "}
                                 <span
-                                  className={`${PlusJakartaSans600.className} text-[16px] text-[#90A3BF]`}
+                                  className={`${PlusJakartaSans600.className} xs:text-[16px] text-[12px] text-[#90A3BF]`}
                                 >
                                   days
                                 </span>
@@ -364,12 +379,12 @@ const Detail = () => {
                           </div>
 
                           <div className="w-[200px] bg-white flex items-center justify-end">
-                          <Link href={'/detail/payment'}>
-                            <button
-                              className={`${PlusJakartaSans700} text-[16px] bg-[#3563E9] w-[140px] h-[56px] text-white rounded-[4px] mr-2`}
-                            >
-                              Rent Now
-                            </button>
+                            <Link href={"/detail/payment"}>
+                              <button
+                                className={`${PlusJakartaSans700} xs:text-[16px] text-[12px] bg-[#3563E9] xs:w-[140px] w-[100px] xs:h-[56px] h-[45px] text-white rounded-[4px] mr-2`}
+                              >
+                                Rent Now
+                              </button>
                             </Link>
                           </div>
                         </div>
@@ -384,7 +399,7 @@ const Detail = () => {
 
           {/* Review */}
 
-          <div className="h-[452px] py-5 px-5">
+          <div className=" py-5 px-5">
             <div className="bg-white rounded-lg w-full h-full py-6 px-5">
               <div className="w-[136px] h-[28px] flex justify-between">
                 <h1 className={`${PlusJakartaSans600.className} text-[20px]`}>
@@ -399,50 +414,59 @@ const Detail = () => {
               </div>
 
               {/* Review 1 */}
-              <div className="w-[948px] h-[124px] mt-8">
+             
+               <div className="w-full mt-8">
                 <div className="w-full h-[56px] flex justify-between">
-                  <div className="w-[20%] flex justify-between">
+                  <div className="flex">
                     <Image
                       src={review1}
                       alt="review-1"
-                      className="h-[56px] w-[56px] rounded-full"
+                      className="xs:h-[56px] xs:w-[56px] h-[45px] w-[45px] rounded-full"
                     />
-                    <div>
+                    <div className="xs:ml-6 ml-3">
                       <h1
-                        className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}
+                        className={`${PlusJakartaSans700.className} xs:text-[20px] text-[14px] text-[#1A202C]`}
                       >
                         Alex Stanton
                       </h1>
                       <h2
-                        className={`${PlusJakartaSans500.className} text-[14px] text-[#90A3BF]`}
+                        className={`${PlusJakartaSans500.className} xs:text-[14px] text-[12px] text-[#90A3BF]`}
                       >
                         CEO at Bukalapak
                       </h2>
                     </div>
                   </div>
 
-                  <div className=" w-[128px]">
+                  <div className="w-[128px]">
                     <h2
-                      className={`${PlusJakartaSans500.className} text-[14px] text-[#90A3BF] ml-[40px] mt-2`}
+                      className={`${PlusJakartaSans500.className} xs:text-[14px] text-[10px] text-[#90A3BF] ml-[40px] mt-2`}
                     >
                       21 July 2022
                     </h2>
                     <div className="flex mt-1 ml-[40px]">
-                      <IoIosStar size={16} className="text-[#FBAD39]" />
-                      <IoIosStar size={16} className="text-[#FBAD39]" />
-                      <IoIosStar size={16} className="text-[#FBAD39]" />
-                      <IoIosStar size={16} className="text-[#FBAD39]" />
-                      <IoIosStar size={16} className="text-[#90A3BF]" />
+                      <IoIosStar  className="text-[#FBAD39] xs:text-[16px] text-[12px]" />
+                      <IoIosStar  className="text-[#FBAD39] xs:text-[16px] text-[12px]" />
+                      <IoIosStar  className="text-[#FBAD39] xs:text-[16px] text-[12px]" />
+                      <IoIosStar  className="text-[#FBAD39] xs:text-[16px] text-[12px]" />
+                      <IoIosStar  className="text-[#90A3BF] xs:text-[16px] text-[12px]" />
                     </div>
                   </div>
                 </div>
-                <div className="w-[876px] ml-[60px] mt-3">
-                <p className={`${PlusJakartaSans500.className} text-[12px] text-[#596780]`}>We are very happy with the service from the MORENT App. Morent has a low price and also a large variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.</p>
-              </div>
+
+                <div className="w-full mt-3 overflow-hidden">
+                  <p
+                    className={`${PlusJakartaSans500.className} text-[12px] text-[#596780] break-words xs:mt-0 mt-5`}
+                  >
+                    We are very happy with the service from the MORENT App. Morent has a low
+                    price and also a large variety of cars with good and comfortable
+                    facilities. In addition, the service provided by the officers is also
+                    very friendly and very polite.
+                  </p>
+                </div>
               </div>
 
-   {/* Review 2 */}
-   <div className="w-[948px] h-[124px] mt-8">
+              {/* Review 2 */}
+              {/* <div className="w-[948px] h-[124px] mt-8">
                 <div className="w-full h-[56px] flex justify-between">
                   <div className="w-[20%] flex justify-between">
                     <Image
@@ -459,7 +483,7 @@ const Detail = () => {
                       <h2
                         className={`${PlusJakartaSans500.className} text-[14px] text-[#90A3BF]`}
                       >
-                       CEO at Amazon
+                        CEO at Amazon
                       </h2>
                     </div>
                   </div>
@@ -480,17 +504,76 @@ const Detail = () => {
                   </div>
                 </div>
                 <div className="w-[876px] ml-[60px] mt-3">
-                <p className={`${PlusJakartaSans500.className} text-[12px] text-[#596780]`}>We are very happy with the service from the MORENT App. Morent has a low price and also a large variety of cars with good and comfortable facilities. In addition, the service provided by the officers is also very friendly and very polite.</p>
+                  <p
+                    className={`${PlusJakartaSans500.className} text-[12px] text-[#596780]`}
+                  >
+                    We are very happy with the service from the MORENT App.
+                    Morent has a low price and also a large variety of cars with
+                    good and comfortable facilities. In addition, the service
+                    provided by the officers is also very friendly and very
+                    polite.
+                  </p>
+                </div>
+              </div> */}
+              <div className="w-full mt-8">
+                <div className="w-full h-[56px] flex justify-between">
+                  <div className="flex">
+                    <Image
+                      src={review2}
+                      alt="review-1"
+                      className="xs:h-[56px] xs:w-[56px] h-[45px] w-[45px] rounded-full"
+                    />
+                    <div className="xs:ml-6 ml-3">
+                      <h1
+                        className={`${PlusJakartaSans700.className} xs:text-[20px] text-[14px] text-[#1A202C]`}
+                      >
+                        Skyler Dias
+                      </h1>
+                      <h2
+                        className={`${PlusJakartaSans500.className} xs:text-[14px] text-[12px] text-[#90A3BF]`}
+                      >
+                        CEO at Amazon
+                      </h2>
+                    </div>
+                  </div>
+
+                  <div className="w-[128px]">
+                    <h2
+                      className={`${PlusJakartaSans500.className} xs:text-[14px] text-[10px] text-[#90A3BF] ml-[40px] mt-2`}
+                    >
+                      21 July 2022
+                    </h2>
+                    <div className="flex mt-1 ml-[40px]">
+                      <IoIosStar className="text-[#FBAD39] xs:text-[16px] text-[12px]" />
+                      <IoIosStar className="text-[#FBAD39] xs:text-[16px] text-[12px]" />
+                      <IoIosStar className="text-[#FBAD39] xs:text-[16px] text-[12px]" />
+                      <IoIosStar className="text-[#FBAD39] xs:text-[16px] text-[12px]" />
+                      <IoIosStar className="text-[#90A3BF] xs:text-[16px] text-[12px]" />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="w-full mt-3 overflow-hidden">
+                  <p
+                    className={`${PlusJakartaSans500.className} text-[12px] text-[#596780] break-words xs:mt-0 mt-5`}
+                  >
+                    We are very happy with the service from the MORENT App. Morent has a low
+                    price and also a large variety of cars with good and comfortable
+                    facilities. In addition, the service provided by the officers is also
+                    very friendly and very polite.
+                  </p>
+                </div>
               </div>
-              </div>
-            
+
+
+
             </div>
           </div>
           {/* Cars Section (Start) */}
 
-          <div className=" mt-5 grid xl:grid-cols-3 lg:grid-cols-2 justify-center grid-cols-1 px-2 py-5">
+          <div className=" mt-5 grid xl:grid-cols-3 gap-2 justify-center grid-cols-1 px-4 py-5">
             {/* Card 1 */}
-            <div className="w-full md:w-[304px] p-4 bg-white rounded-lg shadow-lg">
+            <div className="w-full  p-4 bg-white rounded-lg shadow-lg">
               <div className="flex justify-between items-center mb-4">
                 <h1
                   className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}
@@ -559,7 +642,7 @@ const Detail = () => {
             </div>
 
             {/* Card 2 */}
-            <div className="w-full md:w-[304px] p-4 bg-white rounded-lg shadow-lg">
+            <div className="w-full xl:mt-0 mt-3  p-4 bg-white rounded-lg shadow-lg">
               <div className="flex justify-between items-center mb-4">
                 <h1
                   className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}
@@ -628,7 +711,7 @@ const Detail = () => {
             </div>
 
             {/* Card 3 */}
-            <div className="w-full md:w-[304px] p-4 bg-white rounded-lg shadow-lg">
+            <div className="w-full xl:mt-0 mt-3  p-4 bg-white rounded-lg shadow-lg">
               <div className="flex justify-between items-center mb-4">
                 <h1
                   className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}
@@ -697,7 +780,7 @@ const Detail = () => {
             </div>
 
             {/* Card 4 */}
-            <div className="w-full md:w-[304px] mt-3 p-4 bg-white rounded-lg shadow-lg">
+            <div className="w-full  mt-3 p-4 bg-white rounded-lg shadow-lg">
               <div className="flex justify-between items-center mb-4">
                 <h1
                   className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}
@@ -766,7 +849,7 @@ const Detail = () => {
             </div>
 
             {/* Card 5 */}
-            <div className="w-full md:w-[304px] mt-3 p-4 bg-white rounded-lg shadow-lg">
+            <div className="w-full xl:mt-0 mt-3 p-4 bg-white rounded-lg shadow-lg">
               <div className="flex justify-between items-center mb-4">
                 <h1
                   className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}
@@ -835,7 +918,7 @@ const Detail = () => {
             </div>
 
             {/* Card 6 */}
-            <div className="w-full md:w-[304px] mt-3 p-4 bg-white rounded-lg shadow-lg">
+            <div className="w-full xl:mt-0 mt-3 p-4 bg-white rounded-lg shadow-lg">
               <div className="flex justify-between items-center mb-4">
                 <h1
                   className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}

@@ -376,7 +376,7 @@ const Recomended = () => {
       </div>
       <div className=" flex justify-center mt-[100px]">
       <Link href={'/category'}>
-      <button className={`${PlusJakartaSans500.className} w-[156px] h-[44px] rounded-[4px] px-[20px] py-[10px] bg-[#3563E9] text-white text-[14px]`}>Show more cars</button></Link>
+      <button className={`${PlusJakartaSans500.className} w-[156px] h-[44px] rounded-[4px] px-[20px] py-[10px] bg-[#3563E9] text-white text-[14px] hover:bg-[#002fbb] transition-all duration-300`}>Show more cars</button></Link>
       </div>
     </section>
     </div>

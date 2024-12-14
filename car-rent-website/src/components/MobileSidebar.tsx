@@ -28,7 +28,7 @@ const PlusJakartaSans600 = Plus_Jakarta_Sans({
 
 
 
-const SlidingSidebar = () => {
+const MobileSidebar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const toggleSidebar = (): void => {
@@ -40,7 +40,7 @@ const SlidingSidebar = () => {
       {/* Toggle Button */}
       <div
         onClick={toggleSidebar}
-        className="fixed top-5 left-5 z-50 p-2 rounded-md cursor-pointer"
+        className="sticky left-[28px] text-[#90A3BF] z-50 p-2 rounded-md cursor-pointer"
       >
         {isOpen ? <IoIosCloseCircle size={30}/> : <IoMenu size={30}/>}
       </div>
@@ -119,4 +119,4 @@ const SlidingSidebar = () => {
   );
 };
 
-export default SlidingSidebar;
+export default MobileSidebar;

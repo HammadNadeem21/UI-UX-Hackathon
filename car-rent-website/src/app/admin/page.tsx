@@ -14,6 +14,10 @@ import { CgDarkMode } from "react-icons/cg";
 // Components
 // Switch button
 import { SwitchDemo } from "@/components/Switch";
+import { SelectAdmin } from "@/components/SelectAdmin";
+import { Component } from "@/components/chart";
+import Navbar from "@/components/Navbar";
+
 
 // Image
 import Image from "next/image";
@@ -27,8 +31,7 @@ import rollsRoyal from '../../../public/Admin/rollsRoyal.png'
 
 // Font
 import { Plus_Jakarta_Sans } from "next/font/google";
-import { SelectAdmin } from "@/components/SelectAdmin";
-import { Component } from "@/components/chart";
+
 
 const PlusJakartaSans700 = Plus_Jakarta_Sans({
   weight: "700",
@@ -49,6 +52,8 @@ const PlusJakartaSans600 = Plus_Jakarta_Sans({
 const Admin = () => {
   return (
     <div>
+       {/* Navbar */}
+       <Navbar/>
       <div className="grid grid-cols-[25%,37.5%,37.5%] ">
         {/* Sidebar (Start) */}
         <div className="bg-white py-6 px-8">

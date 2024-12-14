@@ -2,10 +2,12 @@ import React from "react";
 
 // components
 import { SelectPay } from "@/components/Selectpayment";
+import Navbar from "@/components/Navbar";
 
 // icons
 import { MdOutlineSecurity } from "react-icons/md";
 import { IoIosStar } from "react-icons/io";
+
 
 
 // Images
@@ -17,6 +19,7 @@ import Bitcoin from "../../../../public/payment/Bitcoin.png";
 import view1 from '../../../../public/detail/View1.png'
 // Font
 import { Plus_Jakarta_Sans } from "next/font/google";
+
 
 const PlusJakartaSans700 = Plus_Jakarta_Sans({
   weight: "700",
@@ -37,6 +40,8 @@ const PlusJakartaSans600 = Plus_Jakarta_Sans({
 const Payment = () => {
   return (
     <div>
+          {/* Navbar */}
+     <Navbar/>
       <div className="flex">
         {/* Billing Info (Start) */}
         <div className="w-[70%] px-[50px] py-5">

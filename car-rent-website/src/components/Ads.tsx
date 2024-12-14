@@ -24,7 +24,7 @@ const Ads = () => {
     <section className="text-gray-600 body-font">
       <div className="container lg:px-5 md:px-2 xs:px-4 px-8 py-16 mx-auto">
         <div className="grid md:grid-cols-2 grid-cols-1 xs:-m-4 -m-12">
-          {/* Ad 1 */}
+          {/* Ad 1 (Start)*/}
           <div className="xl:w-[640px] w-full p-4">
             <div className="bg-[url(/Ad1.jpeg)] bg-cover h-[360px] p-6 rounded-lg ">
               <div
@@ -51,7 +51,7 @@ const Ads = () => {
 
               <Link href={'/detail'}>
               <button
-                className={`${PlusJakartaSans600.className} text-[16px] text-white w-[122px] h-[44px] bg-[#3563E9] rounded-[4px] lg:mt-0 md:mt-[20px] xs:mt-[30px] mt-[35px] cursor-pointer`}
+                className={`${PlusJakartaSans600.className} text-[16px] text-white w-[122px] h-[44px] bg-[#3563E9] rounded-[4px] lg:mt-0 md:mt-[20px] xs:mt-[30px] mt-[35px] cursor-pointer hover:bg-[#002fbb] transition-all duration-300`}
               >
                 Rental Car
               </button></Link>
@@ -61,8 +61,10 @@ const Ads = () => {
               </div>
             </div>
           </div>
+          {/* Ad 1 (Start)*/}
 
-          {/* Ad 2 */}
+
+          {/* Ad 2 (Start)*/}
           <div className="xl:w-[640px] w-full p-4">
             <div className="bg-[url(/Ad2.jpeg)] bg-cover h-[360px] p-6 rounded-lg ">
               <div
@@ -88,16 +90,18 @@ const Ads = () => {
               </div>
 
               <button
-                className={`${PlusJakartaSans600.className} text-[16px] text-white w-[122px] h-[44px] bg-[#54A6FF] rounded-[4px] lg:mt-0 md:mt-[20px] xs:mt-[30px] mt-[35px] cursor-pointer`}
+                className={`${PlusJakartaSans600.className} text-[16px] text-white w-[122px] h-[44px] bg-[#54A6FF] rounded-[4px] lg:mt-0 md:mt-[20px] xs:mt-[30px] mt-[35px] cursor-pointer hover:bg-[#002fbb] transition-all duration-300`}
               >
                 Rental Car
               </button>
 
-              <div className="xl:w-[406px] lg:w-[350px] h-[106px] lg:ml-[110px] md:ml-[0px] xs:ml-[110px] lg:mt-[-20px] md:mt-[10px] xs:mt-[-10px] mt-[30px] ml-[30px]">
+              <div className="xl:w-[406px] lg:w-[350px] h-[106px] lg:ml-[150px] md:ml-[0px] xs:ml-[110px] lg:mt-[-20px] md:mt-[10px] xs:mt-[-10px] mt-[30px] ml-[30px]">
                 <Image src={Ad2Image} alt="Ad1-Img" />
               </div>
             </div>
           </div>
+          {/* Ad 2 (End)*/}
+
         </div>
       </div>
     </section>

@@ -1,19 +1,20 @@
-"use client"
+"use client";
 import { SelectRent } from "@/components/Select_rent";
 
 import { SliderDemo } from "@/components/Slider";
-
+import MobileSidebar from "@/components/MobileSidebar";
+import Navbar from "@/components/Navbar";
 
 // Image
 import Image from "next/image";
 import mgzx from "../../../public/recomended/mgzx.png";
-import first from '../../../public/popularCars/first.png'
-import NissanGtR1 from '../../../public/popularCars/NissanGtR1.png'
-import rollsRoyal from '../../../public/popularCars/rollsRoyal.png'
-import mgzs from '../../../public/recomended/mgzs.png'
-import rush from '../../../public/recomended/rush.png'
-import crv from '../../../public/recomended/crv.png'
-import terios from '../../../public/recomended/terios.png'
+import first from "../../../public/popularCars/first.png";
+import NissanGtR1 from "../../../public/popularCars/NissanGtR1.png";
+import rollsRoyal from "../../../public/popularCars/rollsRoyal.png";
+import mgzs from "../../../public/recomended/mgzs.png";
+import rush from "../../../public/recomended/rush.png";
+import crv from "../../../public/recomended/crv.png";
+import terios from "../../../public/recomended/terios.png";
 
 // Icons
 import { MdFavorite } from "react-icons/md";
@@ -26,7 +27,6 @@ import { IoIosCloseCircle } from "react-icons/io";
 
 // Font
 import { Plus_Jakarta_Sans } from "next/font/google";
-
 
 const PlusJakartaSans700 = Plus_Jakarta_Sans({
   weight: "700",
@@ -45,12 +45,20 @@ const PlusJakartaSans600 = Plus_Jakarta_Sans({
 });
 
 export default function Category() {
-
-
-
-
   return (
     <div>
+      {/* Mobile Sidebar (Start) */}
+      <div className="md:hidden block">
+        <MobileSidebar />
+      </div>
+      {/* Mobile Sidebar (End) */}
+
+      {/* Navbar (start) */}
+      <div>
+        <Navbar />
+      </div>
+      {/* Navbar (start) */}
+
       <div className="grid md:grid-cols-[25%,75%] grid-cols-1">
         {/* sidebar */}
         <div className="w-full md:block hidden">
@@ -194,492 +202,167 @@ export default function Category() {
         {/* Dashboard */}
         <div className="w-full">
           {/* Pick Up & Drop Up (Start) */}
-       
 
-   
+          <div className="lg:h-[190px] h-[380px] px-5 py-3">
+            <div className="h-[150px] grid xl:grid-cols-[1fr,auto,1fr] lg:grid-cols-[1fr,auto,1fr] xs:grid-cols-[500px] grid-cols-1 justify-center py-3 mt-2">
+              {/* Pick - Up */}
+              <div
+                className={`${PlusJakartaSans600.className} text-[16px] text-[#1A202C] h-[132px] bg-white py-2 xl:px-5 lg:px-[10px] px-5 rounded-[10px]`}
+              >
+                <input type="radio" id="pickUp" />
+                <label htmlFor="pickUp" className="ml-2">
+                  Pick-Up
+                </label>
 
+                <div className="w-full h-[85px] grid grid-cols-[1fr,1fr,1fr] xl:gap-3  xs:gap-2 gap-1 mt-[14px]">
+                  {/* Locations */}
+                  <div className="border-[#C3D4E9] border-r-2 pr-3">
+                    <h1
+                      className={`${PlusJakartaSans700.className} text-[16px] text-[#1A202C]`}
+                    >
+                      Locations
+                    </h1>
+                    <div className="h-[25px] mt-3">
+                      <SelectRent
+                        name="Select your location"
+                        opt1="Karachi"
+                        opt2="Lahore"
+                        opt3="Islamabad"
+                        opt4="Peshawar"
+                        opt5="Multan"
+                      />
+                    </div>
+                  </div>
 
-<div className="lg:h-[190px] h-[380px] px-5 py-3">
+                  {/* Date */}
+                  <div className="border-[#C3D4E9] border-r-2 pr-3">
+                    <h1
+                      className={`${PlusJakartaSans700.className} text-[16px] text-[#1A202C]`}
+                    >
+                      Date
+                    </h1>
+                    <div className="w-full h-[25px] mt-3">
+                      <SelectRent
+                        name="Select your date"
+                        opt1="6"
+                        opt2="12"
+                        opt3="18"
+                        opt4="24"
+                        opt5="30"
+                      />
+                    </div>
+                  </div>
 
+                  {/* Time */}
+                  <div>
+                    <h1
+                      className={`${PlusJakartaSans700.className} text-[16px] text-[#1A202C]`}
+                    >
+                      Time
+                    </h1>
+                    <div className="w-full h-[25px] mt-3">
+                      <SelectRent
+                        name="Select your time"
+                        opt1="8:00 am"
+                        opt2="12:00 pm"
+                        opt3="4:00 pm"
+                        opt4="8:00 pm"
+                        opt5="12:00 am"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
 
+              {/* Switch-Button */}
+              <div className="xl:w-[60px] xl:h-[60px] lg:w-[40px] lg:h-[40px] w-[50px] h-[50px] bg-[#3563E9] rounded-md xl:py-[12px] xl:px-[12px] lg:py-2 lg:px-2 py-3 px-3 cursor-pointer lg:mt-10 m-auto">
+                <TbSwitchVertical className="text-white xl:text-[35px] text-[25px]" />
+              </div>
 
+              {/* Drop - Off */}
+              <div className=" h-[132px] bg-white py-2 xl:px-5 lg:px-[10px] px-5 rounded-[10px]">
+                <input type="radio" id="pickUp" />
+                <label
+                  htmlFor="pickUp"
+                  className={`${PlusJakartaSans600.className} text-[16px] text-[#1A202C] ml-2`}
+                >
+                  Pick-Up
+                </label>
 
-<div className="h-[150px] grid xl:grid-cols-[1fr,auto,1fr] lg:grid-cols-[1fr,auto,1fr] xs:grid-cols-[500px] grid-cols-1 justify-center py-3 mt-2">
-  
-  {/* Pick - Up */}
-  <div className={`${PlusJakartaSans600.className} text-[16px] text-[#1A202C] h-[132px] bg-white py-2 xl:px-5 lg:px-[10px] px-5 rounded-[10px]`}>
-  <input type="radio" id="pickUp" />
-      <label htmlFor="pickUp" className="ml-2">
-        Pick-Up
-      </label>
+                <div className="w-full h-[85px] grid grid-cols-[1fr,1fr,1fr] xl:gap-3 xs:gap-2 gap-1  mt-[14px]">
+                  {/* Locations */}
+                  <div className="border-[#C3D4E9] border-r-2 pr-3">
+                    <h1
+                      className={`${PlusJakartaSans700.className} text-[16px] text-[#1A202C]`}
+                    >
+                      Locations
+                    </h1>
+                    <div className="h-[25px] mt-3">
+                      <SelectRent
+                        name="Select your location"
+                        opt1="Karachi"
+                        opt2="Lahore"
+                        opt3="Islamabad"
+                        opt4="Peshawar"
+                        opt5="Multan"
+                      />
+                    </div>
+                  </div>
 
+                  {/* Date */}
+                  <div className="border-[#C3D4E9] border-r-2 pr-3">
+                    <h1
+                      className={`${PlusJakartaSans700.className} text-[16px] text-[#1A202C]`}
+                    >
+                      Date
+                    </h1>
+                    <div className="w-full h-[25px] mt-3">
+                      <SelectRent
+                        name="Select your date"
+                        opt1="6"
+                        opt2="12"
+                        opt3="18"
+                        opt4="24"
+                        opt5="30"
+                      />
+                    </div>
+                  </div>
 
-      <div className="w-full h-[85px] grid grid-cols-[1fr,1fr,1fr] xl:gap-3  xs:gap-2 gap-1 mt-[14px]">
-
-        {/* Locations */}
-        <div className="border-[#C3D4E9] border-r-2 pr-3">
-          <h1 className={`${PlusJakartaSans700.className} text-[16px] text-[#1A202C]`}>
-            Locations
-          </h1>
-          <div className="h-[25px] mt-3">
-            <SelectRent name="Select your location" opt1="Karachi" opt2="Lahore"  opt3="Islamabad" opt4="Peshawar" opt5="Multan"/>
+                  {/* Time */}
+                  <div>
+                    <h1
+                      className={`${PlusJakartaSans700.className} text-[16px] text-[#1A202C]`}
+                    >
+                      Time
+                    </h1>
+                    <div className="w-full h-[25px] mt-3">
+                      <SelectRent
+                        name="Select your time"
+                        opt1="8:00 am"
+                        opt2="12:00 pm"
+                        opt3="4:00 pm"
+                        opt4="8:00 pm"
+                        opt5="12:00 am"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-
-
-
-        {/* Date */}
-        <div className="border-[#C3D4E9] border-r-2 pr-3">
-          <h1 className={`${PlusJakartaSans700.className} text-[16px] text-[#1A202C]`}>
-            Date
-          </h1>
-          <div className="w-full h-[25px] mt-3">
-            <SelectRent name="Select your date" opt1="6" opt2="12" opt3="18" opt4="24" opt5="30"/>
-          </div>
-        </div>
-
-        {/* Time */}
-        <div>
-          <h1 className={`${PlusJakartaSans700.className} text-[16px] text-[#1A202C]`}>
-            Time
-          </h1>
-          <div className="w-full h-[25px] mt-3">
-            <SelectRent name="Select your time" opt1="8:00 am" opt2="12:00 pm" opt3="4:00 pm" opt4="8:00 pm" opt5="12:00 am" />
-          </div>
-        </div>
-
-
-        </div>
-  </div>
-
-
-{/* Switch-Button */}
-    <div className="xl:w-[60px] xl:h-[60px] lg:w-[40px] lg:h-[40px] w-[50px] h-[50px] bg-[#3563E9] rounded-md xl:py-[12px] xl:px-[12px] lg:py-2 lg:px-2 py-3 px-3 cursor-pointer lg:mt-10 m-auto">
-    <TbSwitchVertical className="text-white xl:text-[35px] text-[25px]"/>
-    </div>
-
-  
-
-
-  {/* Drop - Off */}
-  <div className=" h-[132px] bg-white py-2 xl:px-5 lg:px-[10px] px-5 rounded-[10px]">
-  <input type="radio" id="pickUp" />
-      <label htmlFor="pickUp" className={`${PlusJakartaSans600.className} text-[16px] text-[#1A202C] ml-2`}>
-        Pick-Up
-      </label>
-
-
-      <div className="w-full h-[85px] grid grid-cols-[1fr,1fr,1fr] xl:gap-3 xs:gap-2 gap-1  mt-[14px]">
-
-        {/* Locations */}
-        <div className="border-[#C3D4E9] border-r-2 pr-3">
-          <h1 className={`${PlusJakartaSans700.className} text-[16px] text-[#1A202C]`}>
-            Locations
-          </h1>
-          <div className="h-[25px] mt-3">
-            <SelectRent name="Select your location" opt1="Karachi" opt2="Lahore"  opt3="Islamabad" opt4="Peshawar" opt5="Multan"/>
-          </div>
-        </div>
-
-
-
-        {/* Date */}
-        <div className="border-[#C3D4E9] border-r-2 pr-3">
-          <h1 className={`${PlusJakartaSans700.className} text-[16px] text-[#1A202C]`}>
-            Date
-          </h1>
-          <div className="w-full h-[25px] mt-3">
-            <SelectRent name="Select your date" opt1="6" opt2="12" opt3="18" opt4="24" opt5="30" />
-          </div>
-        </div>
-
-        {/* Time */}
-        <div>
-          <h1 className={`${PlusJakartaSans700.className} text-[16px] text-[#1A202C]`}>
-            Time
-          </h1>
-          <div className="w-full h-[25px] mt-3">
-            <SelectRent name="Select your time" opt1="8:00 am" opt2="12:00 pm" opt3="4:00 pm" opt4="8:00 pm" opt5="12:00 am"/>
-          </div>
-        </div>
-
-
-        </div>
-  </div>
-
-
- 
-</div>
-</div>
 
           {/* Pick Up & Drop Up (End) */}
 
           {/* Cars Section (Start) */}
 
-
-
-
-
-<div className="mt-5 grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:px-5 md:px-2 px-6 py-5 gap-4">
-  {/* Card 1 */}
-  <div className="w-full p-4 bg-white rounded-lg shadow-lg">
-    <div className="flex justify-between items-center mb-4">
-      <h1 className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}>
-        MG ZX Exclusive
-      </h1>
-      <MdFavorite size={24} className="text-[#ED3F3F]" />
-    </div>
-    <h2 className={`${PlusJakartaSans500.className} text-[14px] text-[#90A3BF]`}>
-      Hatchback
-    </h2>
-    <div className="w-full flex justify-center my-6">
-      <Image
-        src={first}
-        alt="MG ZX Exclusive"
-        height={300}
-        width={300}
-        className="w-[232px]"
-      />
-    </div>
-    <div className="flex justify-between items-center mb-6">
-      <div className="flex items-center">
-        <BsFillFuelPumpFill size={24} className="text-[#90A3BF]" />
-        <p className={`${PlusJakartaSans500.className} text-[#90A3BF] text-[15px] ml-2`}>
-          90L
-        </p>
-      </div>
-      <div className="flex items-center">
-        <TbSteeringWheel size={24} className="text-[#90A3BF]" />
-        <p className={`${PlusJakartaSans500.className} text-[#90A3BF] text-[15px] ml-2`}>
-          Manual
-        </p>
-      </div>
-      <div className="flex items-center">
-        <FaUserGroup size={24} className="text-[#90A3BF]" />
-        <p className={`${PlusJakartaSans500.className} text-[#90A3BF] text-[15px] ml-2`}>
-          4 People
-        </p>
-      </div>
-    </div>
-    <div className="flex justify-between items-center">
-      <h1 className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}>
-        $74/ <span className="text-[14px] text-[#90A3BF]">day</span>
-      </h1>
-      <button
-        className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm`}
-      >
-        Rent Now
-      </button>
-    </div>
-    <div
-      className={`${PlusJakartaSans700.className} text-[14px] text-[#90A3BF] line-through mt-[-10px]`}
-    >
-      $80.00
-    </div>
-  </div>
-
-  {/* Card 2 */}
-  <div className="w-full p-4 bg-white rounded-lg shadow-lg">
-    <div className="flex justify-between items-center mb-4">
-      <h1 className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}>
-        MG ZX Exclusive
-      </h1>
-      <MdFavorite size={24} className="text-[#ED3F3F]" />
-    </div>
-    <h2 className={`${PlusJakartaSans500.className} text-[14px] text-[#90A3BF]`}>
-      Hatchback
-    </h2>
-    <div className="w-full flex justify-center my-6">
-      <Image
-        src={mgzx}
-        alt="MG ZX Exclusive"
-        height={300}
-        width={300}
-        className="w-[232px]"
-      />
-    </div>
-    <div className="flex justify-between items-center mb-6">
-      <div className="flex items-center">
-        <BsFillFuelPumpFill size={24} className="text-[#90A3BF]" />
-        <p className={`${PlusJakartaSans500.className} text-[#90A3BF] text-[15px] ml-2`}>
-          90L
-        </p>
-      </div>
-      <div className="flex items-center">
-        <TbSteeringWheel size={24} className="text-[#90A3BF]" />
-        <p className={`${PlusJakartaSans500.className} text-[#90A3BF] text-[15px] ml-2`}>
-          Manual
-        </p>
-      </div>
-      <div className="flex items-center">
-        <FaUserGroup size={24} className="text-[#90A3BF]" />
-        <p className={`${PlusJakartaSans500.className} text-[#90A3BF] text-[15px] ml-2`}>
-          4 People
-        </p>
-      </div>
-    </div>
-    <div className="flex justify-between items-center">
-      <h1 className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}>
-        $74/ <span className="text-[14px] text-[#90A3BF]">day</span>
-      </h1>
-      <button
-        className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm`}
-      >
-        Rent Now
-      </button>
-    </div>
-    <div
-      className={`${PlusJakartaSans700.className} text-[14px] text-[#90A3BF] line-through mt-[-10px]`}
-    >
-      $80.00
-    </div>
-  </div>
-
-
-    {/* Card 2 */}
-    <div className="w-full p-4 bg-white rounded-lg shadow-lg">
-    <div className="flex justify-between items-center mb-4">
-      <h1 className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}>
-        MG ZX Exclusive
-      </h1>
-      <MdFavorite size={24} className="text-[#ED3F3F]" />
-    </div>
-    <h2 className={`${PlusJakartaSans500.className} text-[14px] text-[#90A3BF]`}>
-      Hatchback
-    </h2>
-    <div className="w-full flex justify-center my-6">
-      <Image
-        src={mgzx}
-        alt="MG ZX Exclusive"
-        height={300}
-        width={300}
-        className="w-[232px]"
-      />
-    </div>
-    <div className="flex justify-between items-center mb-6">
-      <div className="flex items-center">
-        <BsFillFuelPumpFill size={24} className="text-[#90A3BF]" />
-        <p className={`${PlusJakartaSans500.className} text-[#90A3BF] text-[15px] ml-2`}>
-          90L
-        </p>
-      </div>
-      <div className="flex items-center">
-        <TbSteeringWheel size={24} className="text-[#90A3BF]" />
-        <p className={`${PlusJakartaSans500.className} text-[#90A3BF] text-[15px] ml-2`}>
-          Manual
-        </p>
-      </div>
-      <div className="flex items-center">
-        <FaUserGroup size={24} className="text-[#90A3BF]" />
-        <p className={`${PlusJakartaSans500.className} text-[#90A3BF] text-[15px] ml-2`}>
-          4 People
-        </p>
-      </div>
-    </div>
-    <div className="flex justify-between items-center">
-      <h1 className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}>
-        $74/ <span className="text-[14px] text-[#90A3BF]">day</span>
-      </h1>
-      <button
-        className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm`}
-      >
-        Rent Now
-      </button>
-    </div>
-    <div
-      className={`${PlusJakartaSans700.className} text-[14px] text-[#90A3BF] line-through mt-[-10px]`}
-    >
-      $80.00
-    </div>
-  </div>
-
-
-    {/* Card 2 */}
-    <div className="w-full p-4 bg-white rounded-lg shadow-lg">
-    <div className="flex justify-between items-center mb-4">
-      <h1 className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}>
-        MG ZX Exclusive
-      </h1>
-      <MdFavorite size={24} className="text-[#ED3F3F]" />
-    </div>
-    <h2 className={`${PlusJakartaSans500.className} text-[14px] text-[#90A3BF]`}>
-      Hatchback
-    </h2>
-    <div className="w-full flex justify-center my-6">
-      <Image
-        src={mgzx}
-        alt="MG ZX Exclusive"
-        height={300}
-        width={300}
-        className="w-[232px]"
-      />
-    </div>
-    <div className="flex justify-between items-center mb-6">
-      <div className="flex items-center">
-        <BsFillFuelPumpFill size={24} className="text-[#90A3BF]" />
-        <p className={`${PlusJakartaSans500.className} text-[#90A3BF] text-[15px] ml-2`}>
-          90L
-        </p>
-      </div>
-      <div className="flex items-center">
-        <TbSteeringWheel size={24} className="text-[#90A3BF]" />
-        <p className={`${PlusJakartaSans500.className} text-[#90A3BF] text-[15px] ml-2`}>
-          Manual
-        </p>
-      </div>
-      <div className="flex items-center">
-        <FaUserGroup size={24} className="text-[#90A3BF]" />
-        <p className={`${PlusJakartaSans500.className} text-[#90A3BF] text-[15px] ml-2`}>
-          4 People
-        </p>
-      </div>
-    </div>
-    <div className="flex justify-between items-center">
-      <h1 className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}>
-        $74/ <span className="text-[14px] text-[#90A3BF]">day</span>
-      </h1>
-      <button
-        className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm`}
-      >
-        Rent Now
-      </button>
-    </div>
-    <div
-      className={`${PlusJakartaSans700.className} text-[14px] text-[#90A3BF] line-through mt-[-10px]`}
-    >
-      $80.00
-    </div>
-  </div>
-
-
-
-    {/* Card 2 */}
-    <div className="w-full p-4 bg-white rounded-lg shadow-lg">
-    <div className="flex justify-between items-center mb-4">
-      <h1 className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}>
-        MG ZX Exclusive
-      </h1>
-      <MdFavorite size={24} className="text-[#ED3F3F]" />
-    </div>
-    <h2 className={`${PlusJakartaSans500.className} text-[14px] text-[#90A3BF]`}>
-      Hatchback
-    </h2>
-    <div className="w-full flex justify-center my-6">
-      <Image
-        src={mgzx}
-        alt="MG ZX Exclusive"
-        height={300}
-        width={300}
-        className="w-[232px]"
-      />
-    </div>
-    <div className="flex justify-between items-center mb-6">
-      <div className="flex items-center">
-        <BsFillFuelPumpFill size={24} className="text-[#90A3BF]" />
-        <p className={`${PlusJakartaSans500.className} text-[#90A3BF] text-[15px] ml-2`}>
-          90L
-        </p>
-      </div>
-      <div className="flex items-center">
-        <TbSteeringWheel size={24} className="text-[#90A3BF]" />
-        <p className={`${PlusJakartaSans500.className} text-[#90A3BF] text-[15px] ml-2`}>
-          Manual
-        </p>
-      </div>
-      <div className="flex items-center">
-        <FaUserGroup size={24} className="text-[#90A3BF]" />
-        <p className={`${PlusJakartaSans500.className} text-[#90A3BF] text-[15px] ml-2`}>
-          4 People
-        </p>
-      </div>
-    </div>
-    <div className="flex justify-between items-center">
-      <h1 className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}>
-        $74/ <span className="text-[14px] text-[#90A3BF]">day</span>
-      </h1>
-      <button
-        className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm`}
-      >
-        Rent Now
-      </button>
-    </div>
-    <div
-      className={`${PlusJakartaSans700.className} text-[14px] text-[#90A3BF] line-through mt-[-10px]`}
-    >
-      $80.00
-    </div>
-  </div>
-
-
-
-    {/* Card 2 */}
-    <div className="w-full p-4 bg-white rounded-lg shadow-lg">
-    <div className="flex justify-between items-center mb-4">
-      <h1 className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}>
-        MG ZX Exclusive
-      </h1>
-      <MdFavorite size={24} className="text-[#ED3F3F]" />
-    </div>
-    <h2 className={`${PlusJakartaSans500.className} text-[14px] text-[#90A3BF]`}>
-      Hatchback
-    </h2>
-    <div className="w-full flex justify-center my-6">
-      <Image
-        src={mgzx}
-        alt="MG ZX Exclusive"
-        height={300}
-        width={300}
-        className="w-[232px]"
-      />
-    </div>
-    <div className="flex justify-between items-center mb-6">
-      <div className="flex items-center">
-        <BsFillFuelPumpFill size={24} className="text-[#90A3BF]" />
-        <p className={`${PlusJakartaSans500.className} text-[#90A3BF] text-[15px] ml-2`}>
-          90L
-        </p>
-      </div>
-      <div className="flex items-center">
-        <TbSteeringWheel size={24} className="text-[#90A3BF]" />
-        <p className={`${PlusJakartaSans500.className} text-[#90A3BF] text-[15px] ml-2`}>
-          Manual
-        </p>
-      </div>
-      <div className="flex items-center">
-        <FaUserGroup size={24} className="text-[#90A3BF]" />
-        <p className={`${PlusJakartaSans500.className} text-[#90A3BF] text-[15px] ml-2`}>
-          4 People
-        </p>
-      </div>
-    </div>
-    <div className="flex justify-between items-center">
-      <h1 className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}>
-        $74/ <span className="text-[14px] text-[#90A3BF]">day</span>
-      </h1>
-      <button
-        className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm`}
-      >
-        Rent Now
-      </button>
-    </div>
-    <div
-      className={`${PlusJakartaSans700.className} text-[14px] text-[#90A3BF] line-through mt-[-10px]`}
-    >
-      $80.00
-    </div>
-  </div>
-  {/* Similar card structure as Card 1 */}
-</div>
-
-
-          {/* <div className=" mt-5 grid xl:grid-cols-3 md:grid-cols-2 justify-center grid-cols-1 lg:px-5 md:px-1 py-5 gap-2">
+          <div className="mt-5 grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:px-5 md:px-2 px-6 py-5 gap-4">
             {/* Card 1 */}
-             {/* <div className="w-full md:w-[304px] p-4 bg-white rounded-lg shadow-lg">
+            <div className="w-full p-4 bg-white rounded-lg shadow-lg">
               <div className="flex justify-between items-center mb-4">
                 <h1
                   className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}
                 >
-                  MG ZX Exclusice
+                  MG ZX Exclusive
                 </h1>
                 <MdFavorite size={24} className="text-[#ED3F3F]" />
               </div>
@@ -690,8 +373,8 @@ export default function Category() {
               </h2>
               <div className="w-full flex justify-center my-6">
                 <Image
-                  src={mgzx}
-                  alt="Rolls Royce"
+                  src={first}
+                  alt="MG ZX Exclusive"
                   height={300}
                   width={300}
                   className="w-[232px]"
@@ -736,19 +419,19 @@ export default function Category() {
                 </button>
               </div>
               <div
-                className={`${PlusJakartaSans700.className} text-[14px] text-[#90A3BF] line-through mt-[-10px] `}
+                className={`${PlusJakartaSans700.className} text-[14px] text-[#90A3BF] line-through mt-[-10px]`}
               >
                 $80.00
               </div>
-            </div>  */}
+            </div>
 
             {/* Card 2 */}
-             {/* <div className="w-full md:w-[304px] p-4 bg-white rounded-lg shadow-lg">
+            <div className="w-full p-4 bg-white rounded-lg shadow-lg">
               <div className="flex justify-between items-center mb-4">
                 <h1
                   className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}
                 >
-                  MG ZX Exclusice
+                  MG ZX Exclusive
                 </h1>
                 <MdFavorite size={24} className="text-[#ED3F3F]" />
               </div>
@@ -759,8 +442,8 @@ export default function Category() {
               </h2>
               <div className="w-full flex justify-center my-6">
                 <Image
-                  src={mgzx}
-                  alt="Rolls Royce"
+                  src={NissanGtR1}
+                  alt="MG ZX Exclusive"
                   height={300}
                   width={300}
                   className="w-[232px]"
@@ -805,19 +488,19 @@ export default function Category() {
                 </button>
               </div>
               <div
-                className={`${PlusJakartaSans700.className} text-[14px] text-[#90A3BF] line-through mt-[-10px] `}
+                className={`${PlusJakartaSans700.className} text-[14px] text-[#90A3BF] line-through mt-[-10px]`}
               >
                 $80.00
               </div>
-            </div>  */}
+            </div>
 
             {/* Card 3 */}
-            {/* <div className="w-full lg:w-[304px] md:w-[284px] p-4 bg-white rounded-lg shadow-lg">
-              <div className="flex justify-between items-center">
+            <div className="w-full p-4 bg-white rounded-lg shadow-lg">
+              <div className="flex justify-between items-center mb-4">
                 <h1
                   className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}
                 >
-                  MG ZX Exclusice
+                  MG ZX Exclusive
                 </h1>
                 <MdFavorite size={24} className="text-[#ED3F3F]" />
               </div>
@@ -828,8 +511,8 @@ export default function Category() {
               </h2>
               <div className="w-full flex justify-center my-6">
                 <Image
-                  src={mgzx}
-                  alt="Rolls Royce"
+                  src={rollsRoyal}
+                  alt="MG ZX Exclusive"
                   height={300}
                   width={300}
                   className="w-[232px]"
@@ -874,19 +557,19 @@ export default function Category() {
                 </button>
               </div>
               <div
-                className={`${PlusJakartaSans700.className} text-[14px] text-[#90A3BF] line-through mt-[-10px] `}
+                className={`${PlusJakartaSans700.className} text-[14px] text-[#90A3BF] line-through mt-[-10px]`}
               >
                 $80.00
               </div>
-            </div>  */}
+            </div>
 
             {/* Card 4 */}
-            {/* <div className="w-full md:w-[304px] mt-3 p-4 bg-white rounded-lg shadow-lg">
+            <div className="w-full p-4 bg-white rounded-lg shadow-lg">
               <div className="flex justify-between items-center mb-4">
                 <h1
                   className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}
                 >
-                  MG ZX Exclusice
+                  MG ZX Exclusive
                 </h1>
                 <MdFavorite size={24} className="text-[#ED3F3F]" />
               </div>
@@ -897,8 +580,8 @@ export default function Category() {
               </h2>
               <div className="w-full flex justify-center my-6">
                 <Image
-                  src={mgzx}
-                  alt="Rolls Royce"
+                  src={rush}
+                  alt="MG ZX Exclusive"
                   height={300}
                   width={300}
                   className="w-[232px]"
@@ -943,19 +626,19 @@ export default function Category() {
                 </button>
               </div>
               <div
-                className={`${PlusJakartaSans700.className} text-[14px] text-[#90A3BF] line-through mt-[-10px] `}
+                className={`${PlusJakartaSans700.className} text-[14px] text-[#90A3BF] line-through mt-[-10px]`}
               >
                 $80.00
               </div>
-            </div> */}
+            </div>
 
             {/* Card 5 */}
-            {/* <div className="w-full md:w-[304px] mt-3 p-4 bg-white rounded-lg shadow-lg">
+            <div className="w-full p-4 bg-white rounded-lg shadow-lg">
               <div className="flex justify-between items-center mb-4">
                 <h1
                   className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}
                 >
-                  MG ZX Exclusice
+                  MG ZX Exclusive
                 </h1>
                 <MdFavorite size={24} className="text-[#ED3F3F]" />
               </div>
@@ -966,8 +649,8 @@ export default function Category() {
               </h2>
               <div className="w-full flex justify-center my-6">
                 <Image
-                  src={mgzx}
-                  alt="Rolls Royce"
+                  src={crv}
+                  alt="MG ZX Exclusive"
                   height={300}
                   width={300}
                   className="w-[232px]"
@@ -1012,19 +695,19 @@ export default function Category() {
                 </button>
               </div>
               <div
-                className={`${PlusJakartaSans700.className} text-[14px] text-[#90A3BF] line-through mt-[-10px] `}
+                className={`${PlusJakartaSans700.className} text-[14px] text-[#90A3BF] line-through mt-[-10px]`}
               >
                 $80.00
               </div>
-            </div> */}
+            </div>
 
             {/* Card 6 */}
-            {/* <div className="w-full md:w-[304px] mt-3 p-4 bg-white rounded-lg shadow-lg">
+            <div className="w-full p-4 bg-white rounded-lg shadow-lg">
               <div className="flex justify-between items-center mb-4">
                 <h1
                   className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}
                 >
-                  MG ZX Exclusice
+                  MG ZX Exclusive
                 </h1>
                 <MdFavorite size={24} className="text-[#ED3F3F]" />
               </div>
@@ -1035,8 +718,8 @@ export default function Category() {
               </h2>
               <div className="w-full flex justify-center my-6">
                 <Image
-                  src={mgzx}
-                  alt="Rolls Royce"
+                  src={terios}
+                  alt="MG ZX Exclusive"
                   height={300}
                   width={300}
                   className="w-[232px]"
@@ -1081,19 +764,20 @@ export default function Category() {
                 </button>
               </div>
               <div
-                className={`${PlusJakartaSans700.className} text-[14px] text-[#90A3BF] line-through mt-[-10px] `}
+                className={`${PlusJakartaSans700.className} text-[14px] text-[#90A3BF] line-through mt-[-10px]`}
               >
                 $80.00
               </div>
-            </div> */} 
+            </div>
+            
 
-            {/* Card 7 */}
-            {/* <div className="w-full md:w-[304px] mt-3 p-4 bg-white rounded-lg shadow-lg">
+  {/* Card 6 */}
+  <div className="w-full p-4 bg-white rounded-lg shadow-lg">
               <div className="flex justify-between items-center mb-4">
                 <h1
                   className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}
                 >
-                  MG ZX Exclusice
+                  MG ZX Exclusive
                 </h1>
                 <MdFavorite size={24} className="text-[#ED3F3F]" />
               </div>
@@ -1105,7 +789,7 @@ export default function Category() {
               <div className="w-full flex justify-center my-6">
                 <Image
                   src={mgzx}
-                  alt="Rolls Royce"
+                  alt="MG ZX Exclusive"
                   height={300}
                   width={300}
                   className="w-[232px]"
@@ -1150,19 +834,20 @@ export default function Category() {
                 </button>
               </div>
               <div
-                className={`${PlusJakartaSans700.className} text-[14px] text-[#90A3BF] line-through mt-[-10px] `}
+                className={`${PlusJakartaSans700.className} text-[14px] text-[#90A3BF] line-through mt-[-10px]`}
               >
                 $80.00
               </div>
-            </div> */}
+            </div>
 
-            {/* Card 8 */}
-            {/* <div className="w-full md:w-[304px] mt-3 p-4 bg-white rounded-lg shadow-lg">
+
+  {/* Card 8 */}
+  <div className="w-full p-4 bg-white rounded-lg shadow-lg">
               <div className="flex justify-between items-center mb-4">
                 <h1
                   className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}
                 >
-                  MG ZX Exclusice
+                  MG ZX Exclusive
                 </h1>
                 <MdFavorite size={24} className="text-[#ED3F3F]" />
               </div>
@@ -1173,8 +858,8 @@ export default function Category() {
               </h2>
               <div className="w-full flex justify-center my-6">
                 <Image
-                  src={mgzx}
-                  alt="Rolls Royce"
+                  src={mgzs}
+                  alt="MG ZX Exclusive"
                   height={300}
                   width={300}
                   className="w-[232px]"
@@ -1219,19 +904,21 @@ export default function Category() {
                 </button>
               </div>
               <div
-                className={`${PlusJakartaSans700.className} text-[14px] text-[#90A3BF] line-through mt-[-10px] `}
+                className={`${PlusJakartaSans700.className} text-[14px] text-[#90A3BF] line-through mt-[-10px]`}
               >
                 $80.00
               </div>
-            </div> */}
+            </div>
 
-            {/* Card 9 */}
-            {/* <div className="w-full md:w-[304px] mt-3 p-4 bg-white rounded-lg shadow-lg">
+
+
+  {/* Card 9 */}
+  <div className="w-full p-4 bg-white rounded-lg shadow-lg">
               <div className="flex justify-between items-center mb-4">
                 <h1
                   className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}
                 >
-                  MG ZX Exclusice
+                  MG ZX Exclusive
                 </h1>
                 <MdFavorite size={24} className="text-[#ED3F3F]" />
               </div>
@@ -1243,7 +930,7 @@ export default function Category() {
               <div className="w-full flex justify-center my-6">
                 <Image
                   src={mgzx}
-                  alt="Rolls Royce"
+                  alt="MG ZX Exclusive"
                   height={300}
                   width={300}
                   className="w-[232px]"
@@ -1288,17 +975,18 @@ export default function Category() {
                 </button>
               </div>
               <div
-                className={`${PlusJakartaSans700.className} text-[14px] text-[#90A3BF] line-through mt-[-10px] `}
+                className={`${PlusJakartaSans700.className} text-[14px] text-[#90A3BF] line-through mt-[-10px]`}
               >
                 $80.00
               </div>
-            </div> */}
-
+            </div>
 
           </div>
-          {/* Cars Section (End) */}
-        </div>
+
+          </div>
+        {/* Cars Section (End) */}
       </div>
+    </div>
     // </div>
   );
 }
