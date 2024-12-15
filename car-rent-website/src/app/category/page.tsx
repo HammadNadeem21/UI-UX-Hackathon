@@ -22,8 +22,7 @@ import { BsFillFuelPumpFill } from "react-icons/bs";
 import { TbSteeringWheel } from "react-icons/tb";
 import { FaUserGroup } from "react-icons/fa6";
 import { TbSwitchVertical } from "react-icons/tb";
-import { IoMenu } from "react-icons/io5";
-import { IoIosCloseCircle } from "react-icons/io";
+
 
 // Font
 import { Plus_Jakarta_Sans } from "next/font/google";

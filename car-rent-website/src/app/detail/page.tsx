@@ -198,7 +198,7 @@ const Detail = () => {
           {/* Detail (Start) */}
           <div>
             <section className="text-gray-600 body-font">
-              <div className="container xs:px-4 py-5 mx-auto flex flex-wrap">
+              <div className="container px-4 py-5 mx-auto flex flex-wrap">
                 <div className="grid lg:grid-cols-2 grid-cols-1">
                   {/* Right */}
                   <div className="flex flex-wrap w-full">
