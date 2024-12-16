@@ -36,11 +36,11 @@ const MobileSidebar = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative z-50">
       {/* Toggle Button */}
       <div
         onClick={toggleSidebar}
-        className="sticky left-[28px] text-[#90A3BF] z-50 p-2 rounded-md cursor-pointer"
+        className="fixed left-[28px] text-[#90A3BF] z-50 p-2 rounded-md cursor-pointer"
       >
         {isOpen ? <IoIosCloseCircle size={30}/> : <IoMenu size={30}/>}
       </div>
@@ -55,7 +55,7 @@ const MobileSidebar = () => {
          
 
           {/* Sidebar Content */}
-          <div className="w-full mt-5">
+          <div className="w-full mt-5 z-50">
             <div className="bg-white h-full py-5 px-3">
               <div className="w-[176px] h-[302px] ml-5">
                 <h1 className="text-[12px] text-[#90A3BF] font-semibold">TYPE</h1>

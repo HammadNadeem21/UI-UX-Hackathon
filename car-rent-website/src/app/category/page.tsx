@@ -47,7 +47,7 @@ export default function Category() {
   return (
     <div>
       {/* Mobile Sidebar (Start) */}
-      <div className="md:hidden block">
+      <div className="md:hidden block sticky z-50">
         <MobileSidebar />
       </div>
       {/* Mobile Sidebar (End) */}

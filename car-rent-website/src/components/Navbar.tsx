@@ -15,7 +15,6 @@ import { IoNotifications } from "react-icons/io5";
 // Setting-Icons
 import { IoMdSettings } from "react-icons/io";
 
-
 // Avatar Component
 import { AvatarDemo } from "./Avatar";
 
@@ -39,10 +38,22 @@ const Navbar = () => {
             >
               MORENT
             </h1>
-            <div className="xs:hidden cursor-pointer">
-              <Link href={'/admin'}>
-              <AvatarDemo />
-              
+            <div className="xs:hidden cursor-pointer flex gap-[10px]">
+
+              <div className="w-[40px] h-[40px] border border-[#C3D4E966] rounded-full px-1 py-1">
+                <MdFavorite className="text-[#717e96] text-[30px] hover:text-[#3563E9] transition-all duration-300 cursor-pointer" />
+              </div>
+
+              <div className="w-[40px] h-[40px] border border-[#C3D4E966] rounded-full px-1 py-1">
+                <IoNotifications className="text-[#717e96] text-[30px] hover:text-[#3563E9] transition-all duration-300 cursor-pointer" />
+              </div>
+
+              <div className="w-[40px] h-[40px] border border-[#C3D4E966] rounded-full px-1 py-1">
+                <IoMdSettings className="text-[#717e96] text-[30px] hover:text-[#3563E9] transition-all duration-300 cursor-pointer" />
+              </div>
+
+              <Link href={"/admin"}>
+                <AvatarDemo />
               </Link>
             </div>
           </div>
@@ -72,13 +83,13 @@ const Navbar = () => {
           <div className=" w-[236px] h-[44px] md:flex lg:gap-[20px] gap-[12px] ml-2 hidden">
             {/* Favourite-icon */}
             <div className="2xl:w-[45px] 2xl:h-[45px] lg:w-[40px] lg:h-[40px] md:w-[35px] md:h-[35px] border border-[#C3D4E966] rounded-full lg:py-[3.5px] lg:px-[4px] md:py-[3.5px] md:px-[4px]">
-              <MdFavorite className="text-[#717e96] lg:text-[30px] md:text-[25px] cursor-pointer" />
+              <MdFavorite className="text-[#717e96] lg:text-[30px] md:text-[25px] cursor-pointer hover:text-[#3563E9] transition-all duration-300" />
             </div>
             {/* Notification-icon */}
 
             <div className="relative 2xl:w-[45px] 2xl:h-[45px] lg:w-[40px] lg:h-[40px] md:w-[35px] md:h-[35px] border border-[#C3D4E966] rounded-full lg:py-[3.5px] lg:px-[4px] md:py-[3.5px] md:px-[4px]">
               {/* Notification Icon */}
-              <IoNotifications className="text-[#717e96] lg:text-[30px] md:text-[25px] cursor-pointer" />
+              <IoNotifications className="text-[#717e96] lg:text-[30px] md:text-[25px] cursor-pointer hover:text-[#3563E9] transition-all duration-300" />
 
               {/* Notification Dot */}
               <span className="absolute top-[-2px] right-1 w-[11px] h-[11px] bg-[#FF4423] rounded-full border-2 border-white"></span>
@@ -86,15 +97,14 @@ const Navbar = () => {
 
             {/* Setting-icon */}
             <div className="2xl:w-[45px] 2xl:h-[45px] lg:w-[40px] lg:h-[40px] md:w-[35px] md:h-[35px] border border-[#C3D4E966] rounded-full lg:py-[3.5px] lg:px-[4px] md:py-[3.5px] md:px-[4px]">
-              <IoMdSettings className="text-[#717e96] lg:text-[30px] md:text-[25px] cursor-pointer" />
+              <IoMdSettings className="text-[#717e96] lg:text-[30px] md:text-[25px] cursor-pointer hover:text-[#3563E9] transition-all duration-300" />
             </div>
           </div>
           {/* Avatar */}
           <div className="md:ml-0 ml-[30px] xs:block hidden cursor-pointer">
-          <Link href={'/admin'}>
+            <Link href={"/admin"}>
               <AvatarDemo />
-              
-              </Link>
+            </Link>
           </div>
         </div>
       </div>
@@ -103,4 +113,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
