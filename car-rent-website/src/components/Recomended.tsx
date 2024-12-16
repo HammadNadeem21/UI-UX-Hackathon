@@ -78,7 +78,7 @@ const Recomended = () => {
               $72/ <span className="text-[14px] text-[#90A3BF]">day</span>
             </h1>
             <button
-              className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm`}
+              className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm cursor-pointer hover:bg-[#002fbb] transition-all duration-300`}
             >
               Rent Now
             </button>
@@ -120,7 +120,7 @@ const Recomended = () => {
               $80/ <span className="text-[14px] text-[#90A3BF]">day</span>
             </h1>
             <button
-              className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm`}
+              className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm cursor-pointer hover:bg-[#002fbb] transition-all duration-300`}
             >
               Rent Now
             </button>
@@ -160,7 +160,7 @@ const Recomended = () => {
               $74/ <span className="text-[14px] text-[#90A3BF]">day</span>
             </h1>
             <button
-              className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm`}
+              className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm cursor-pointer hover:bg-[#002fbb] transition-all duration-300`}
             >
               Rent Now
             </button>
@@ -200,7 +200,7 @@ const Recomended = () => {
               $80/ <span className="text-[14px] text-[#90A3BF]">day</span>
             </h1>
             <button
-              className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm`}
+              className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm cursor-pointer hover:bg-[#002fbb] transition-all duration-300`}
             >
               Rent Now
             </button>
@@ -242,7 +242,7 @@ const Recomended = () => {
               $76/ <span className="text-[14px] text-[#90A3BF]">day</span>
             </h1>
             <button
-              className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm`}
+              className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm cursor-pointer hover:bg-[#002fbb] transition-all duration-300`}
             >
               Rent Now
             </button>
@@ -283,7 +283,7 @@ const Recomended = () => {
               $80/ <span className="text-[14px] text-[#90A3BF]">day</span>
             </h1>
             <button
-              className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm`}
+              className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm cursor-pointer hover:bg-[#002fbb] transition-all duration-300`}
             >
               Rent Now
             </button>
@@ -324,7 +324,7 @@ const Recomended = () => {
               $74/ <span className="text-[14px] text-[#90A3BF]">day</span>
             </h1>
             <button
-              className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm`}
+              className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm cursor-pointer hover:bg-[#002fbb] transition-all duration-300`}
             >
               Rent Now
             </button>
@@ -365,7 +365,7 @@ const Recomended = () => {
               $80/ <span className="text-[14px] text-[#90A3BF]">day</span>
             </h1>
             <button
-              className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm`}
+              className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm cursor-pointer hover:bg-[#002fbb] transition-all duration-300`}
             >
               Rent Now
             </button>

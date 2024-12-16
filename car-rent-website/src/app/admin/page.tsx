@@ -54,7 +54,7 @@ const Admin = () => {
   return (
     <div>
           {/* Mobile Sidebar (Start) */}
-          <div className="lg:hidden block sticky z-50">
+          <div className="lg:hidden block fixed z-50 left-[40px]">
         <MobileAdmin/>
       </div>
       {/* Mobile Sidebar (End) */}
