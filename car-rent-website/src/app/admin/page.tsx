@@ -32,6 +32,7 @@ import rollsRoyal from '../../../public/Admin/rollsRoyal.png'
 // Font
 import { Plus_Jakarta_Sans } from "next/font/google";
 import MobileAdmin from "@/components/MobileAdmin";
+import NavbarAdmin from "@/components/Navbaradmin";
 
 
 const PlusJakartaSans700 = Plus_Jakarta_Sans({
@@ -54,12 +55,15 @@ const Admin = () => {
   return (
     <div>
           {/* Mobile Sidebar (Start) */}
-          <div className="lg:hidden block fixed z-50 left-[40px]">
+          <div className="lg:hidden block z-50 left-[40px] bg-white">
         <MobileAdmin/>
       </div>
       {/* Mobile Sidebar (End) */}
        {/* Navbar */}
        <Navbar/>
+
+      {/* <NavbarAdmin/> */}
+
       <div className="grid lg:grid-cols-[25%,75%] grid-cols-1">
         {/* Sidebar (Start) */}
         <div className="bg-white py-6 px-8 lg:block hidden">

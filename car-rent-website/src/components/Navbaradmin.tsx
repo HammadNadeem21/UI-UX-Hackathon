@@ -21,16 +21,23 @@ import { AvatarDemo } from "./Avatar";
 // Fonts
 import { Plus_Jakarta_Sans } from "next/font/google";
 import Link from "next/link";
+import MobileAdmin from "./MobileAdmin";
 const PlusJakartaSans = Plus_Jakarta_Sans({
   weight: "700",
   display: "swap",
   subsets: ["latin"],
 });
 
-const Navbar = () => {
+const NavbarAdmin = () => {
   return (
     <div className="bg-white w-full">
+       
+       <div className="lg:hidden">
+        <MobileAdmin/>
+        </div>
       <div className="w-full xs:h-[124px] h-[150px] border-b-[1px] border-[#C3D4E966] flex pt-[40px] xs:px-[50px] pl-[40px]">
+    
+        
         <div className="md:w-[60%] xs:w-[90%] w-[100%] h-[50px] xs:flex xs:justify-between">
           <div className="flex w-full justify-between">
             <h1
@@ -107,9 +114,10 @@ const Navbar = () => {
             </Link>
           </div>
         </div>
+
       </div>
     </div>
   );
 };
 
-export default Navbar;
+export default NavbarAdmin;

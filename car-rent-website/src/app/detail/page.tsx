@@ -52,12 +52,13 @@ const Detail = () => {
   return (
     <div>
       {/* Mobile Sidebar (Start) */}
-      <div className="md:hidden block sticky z-50">
+      <div className="md:hidden block z-50 bg-white">
         <MobileSidebar />
       </div>
       {/* Mobile Sidebar (End) */}
       {/* Navbar */}
       <Navbar />
+      
       <div className="grid md:grid-cols-[25%,75%] grid-cols-1">
         {/* sidebar (Start) */}
         <div className="w-full md:block hidden">
