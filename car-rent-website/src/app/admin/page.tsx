@@ -12,7 +12,7 @@ import { MdErrorOutline } from "react-icons/md";
 import { CgDarkMode } from "react-icons/cg";
 
 // Components
-
+// Switch button
 import { SwitchDemo } from "@/components/Switch";
 import { SelectAdmin } from "@/components/SelectAdmin";
 import { Component } from "@/components/chart";
