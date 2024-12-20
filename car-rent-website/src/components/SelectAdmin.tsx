@@ -13,7 +13,7 @@ import {
 export function SelectAdmin(props:{name:string, opt1:string, opt2:string}) {
   return (
     <Select>
-      <SelectTrigger className="w-[120px] text-[12p] focus:outline-none bg-transparent h-[20px] mt-2">
+      <SelectTrigger className="xs:w-[120px] w-[80px] text-[12px] focus:outline-none bg-transparent h-[20px] mt-2">
         <SelectValue placeholder={props.name}/>
       </SelectTrigger>
       <SelectContent className="bg-gray-200">
