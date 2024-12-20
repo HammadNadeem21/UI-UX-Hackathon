@@ -23,7 +23,6 @@ import { TbSteeringWheel } from "react-icons/tb";
 import { FaUserGroup } from "react-icons/fa6";
 import { TbSwitchVertical } from "react-icons/tb";
 
-
 // Font
 import { Plus_Jakarta_Sans } from "next/font/google";
 
@@ -206,10 +205,10 @@ export default function Category() {
             <div className="h-[150px] grid xl:grid-cols-[1fr,auto,1fr] lg:grid-cols-[1fr,auto,1fr] xs:grid-cols-[500px] grid-cols-1 justify-center py-3 mt-2">
               {/* Pick - Up */}
               <div
-                className={`${PlusJakartaSans600.className} text-[16px] text-[#1A202C] h-[132px] bg-white py-2 xl:px-5 lg:px-[10px] px-5 rounded-[10px]`}
+                className={`${PlusJakartaSans600.className} text-base text-[#1A202C] h-[132px] bg-white py-2 xl:px-5 lg:px-[10px] px-5 rounded-[10px]`}
               >
                 <input type="radio" id="pickUp" />
-                <label htmlFor="pickUp" className="ml-2">
+                <label htmlFor="pickUp" className="ml-2 cursor-pointer">
                   Pick-Up
                 </label>
 
@@ -280,12 +279,12 @@ export default function Category() {
 
               {/* Drop - Off */}
               <div className=" h-[132px] bg-white py-2 xl:px-5 lg:px-[10px] px-5 rounded-[10px]">
-                <input type="radio" id="pickUp" />
+                <input type="radio" id="dropOff" />
                 <label
-                  htmlFor="pickUp"
-                  className={`${PlusJakartaSans600.className} text-[16px] text-[#1A202C] ml-2`}
+                  htmlFor="dropOff"
+                  className={`${PlusJakartaSans600.className} text-base text-[#1A202C] ml-2 cursor-pointer`}
                 >
-                  Pick-Up
+                  Drop-Off
                 </label>
 
                 <div className="w-full h-[85px] grid grid-cols-[1fr,1fr,1fr] xl:gap-3 xs:gap-2 gap-1  mt-[14px]">
@@ -405,20 +404,21 @@ export default function Category() {
                   </p>
                 </div>
               </div>
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between mt-10">
                 <h1
                   className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}
                 >
-                  $74/ <span className="text-[14px] text-[#90A3BF]">day</span>
+                  $99.00/{" "}
+                  <span className="text-[14px] text-[#90A3BF]">day</span>
                 </h1>
                 <button
-                  className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm`}
+                  className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm hover:bg-[#002fbb] transition-all duration-300`}
                 >
                   Rent Now
                 </button>
               </div>
               <div
-                className={`${PlusJakartaSans700.className} text-[14px] text-[#90A3BF] line-through mt-[-10px]`}
+                className={`${PlusJakartaSans700.className} text-[14px] text-[#90A3BF] line-through mt-[-20px]`}
               >
                 $80.00
               </div>
@@ -474,20 +474,21 @@ export default function Category() {
                   </p>
                 </div>
               </div>
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between mt-9">
                 <h1
                   className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}
                 >
-                  $74/ <span className="text-[14px] text-[#90A3BF]">day</span>
+                  $85.00/{" "}
+                  <span className="text-[14px] text-[#90A3BF]">day</span>
                 </h1>
                 <button
-                  className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm`}
+                  className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm hover:bg-[#002fbb] transition-all duration-300`}
                 >
                   Rent Now
                 </button>
               </div>
               <div
-                className={`${PlusJakartaSans700.className} text-[14px] text-[#90A3BF] line-through mt-[-10px]`}
+                className={`${PlusJakartaSans700.className} text-[14px] text-[#90A3BF] line-through mt-[-20px]`}
               >
                 $80.00
               </div>
@@ -543,20 +544,21 @@ export default function Category() {
                   </p>
                 </div>
               </div>
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between mt-9">
                 <h1
                   className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}
                 >
-                  $74/ <span className="text-[14px] text-[#90A3BF]">day</span>
+                  $90.00/{" "}
+                  <span className="text-[14px] text-[#90A3BF]">day</span>
                 </h1>
                 <button
-                  className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm`}
+                  className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm hover:bg-[#002fbb] transition-all duration-300`}
                 >
                   Rent Now
                 </button>
               </div>
               <div
-                className={`${PlusJakartaSans700.className} text-[14px] text-[#90A3BF] line-through mt-[-10px]`}
+                className={`${PlusJakartaSans700.className} text-[14px] text-[#90A3BF] line-through mt-[-20px]`}
               >
                 $80.00
               </div>
@@ -612,22 +614,23 @@ export default function Category() {
                   </p>
                 </div>
               </div>
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between mt-8">
                 <h1
                   className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}
                 >
-                  $74/ <span className="text-[14px] text-[#90A3BF]">day</span>
+                  $80.00/{" "}
+                  <span className="text-[14px] text-[#90A3BF]">day</span>
                 </h1>
                 <button
-                  className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm`}
+                  className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm hover:bg-[#002fbb] transition-all duration-300`}
                 >
                   Rent Now
                 </button>
               </div>
               <div
-                className={`${PlusJakartaSans700.className} text-[14px] text-[#90A3BF] line-through mt-[-10px]`}
+                className={`${PlusJakartaSans700.className} text-[14px] text-[#90A3BF] line-through mt-[-20px]`}
               >
-                $80.00
+                $60.00
               </div>
             </div>
 
@@ -681,22 +684,23 @@ export default function Category() {
                   </p>
                 </div>
               </div>
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between mt-10">
                 <h1
                   className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}
                 >
-                  $74/ <span className="text-[14px] text-[#90A3BF]">day</span>
+                  $80.00/{" "}
+                  <span className="text-[14px] text-[#90A3BF]">day</span>
                 </h1>
                 <button
-                  className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm`}
+                  className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm hover:bg-[#002fbb] transition-all duration-300`}
                 >
                   Rent Now
                 </button>
               </div>
               <div
-                className={`${PlusJakartaSans700.className} text-[14px] text-[#90A3BF] line-through mt-[-10px]`}
+                className={`${PlusJakartaSans700.className} text-[14px] text-[#90A3BF] line-through mt-[-20px]`}
               >
-                $80.00
+                $60.00
               </div>
             </div>
 
@@ -750,28 +754,28 @@ export default function Category() {
                   </p>
                 </div>
               </div>
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between mt-8">
                 <h1
                   className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}
                 >
-                  $74/ <span className="text-[14px] text-[#90A3BF]">day</span>
+                  $80.00/{" "}
+                  <span className="text-[14px] text-[#90A3BF]">day</span>
                 </h1>
                 <button
-                  className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm`}
+                  className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm hover:bg-[#002fbb] transition-all duration-300`}
                 >
                   Rent Now
                 </button>
               </div>
               <div
-                className={`${PlusJakartaSans700.className} text-[14px] text-[#90A3BF] line-through mt-[-10px]`}
+                className={`${PlusJakartaSans700.className} text-[14px] text-[#90A3BF] line-through mt-[-20px]`}
               >
-                $80.00
+                $60.00
               </div>
             </div>
-            
 
-  {/* Card 6 */}
-  <div className="w-full p-4 bg-white rounded-lg shadow-lg">
+            {/* Card 7 */}
+            <div className="w-full p-4 bg-white rounded-lg shadow-lg">
               <div className="flex justify-between items-center mb-4">
                 <h1
                   className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}
@@ -820,28 +824,28 @@ export default function Category() {
                   </p>
                 </div>
               </div>
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between mt-9">
                 <h1
                   className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}
                 >
-                  $74/ <span className="text-[14px] text-[#90A3BF]">day</span>
+                  $74.00/{" "}
+                  <span className="text-[14px] text-[#90A3BF]">day</span>
                 </h1>
                 <button
-                  className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm`}
+                  className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm hover:bg-[#002fbb] transition-all duration-300`}
                 >
                   Rent Now
                 </button>
               </div>
               <div
-                className={`${PlusJakartaSans700.className} text-[14px] text-[#90A3BF] line-through mt-[-10px]`}
+                className={`${PlusJakartaSans700.className} text-[14px] text-[#90A3BF] line-through mt-[-20px]`}
               >
-                $80.00
+                $60.00
               </div>
             </div>
 
-
-  {/* Card 8 */}
-  <div className="w-full p-4 bg-white rounded-lg shadow-lg">
+            {/* Card 8 */}
+            <div className="w-full p-4 bg-white rounded-lg shadow-lg">
               <div className="flex justify-between items-center mb-4">
                 <h1
                   className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}
@@ -890,29 +894,28 @@ export default function Category() {
                   </p>
                 </div>
               </div>
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between mt-10">
                 <h1
                   className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}
                 >
-                  $74/ <span className="text-[14px] text-[#90A3BF]">day</span>
+                  $74.00/{" "}
+                  <span className="text-[14px] text-[#90A3BF]">day</span>
                 </h1>
                 <button
-                  className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm`}
+                  className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm hover:bg-[#002fbb] transition-all duration-300`}
                 >
                   Rent Now
                 </button>
               </div>
               <div
-                className={`${PlusJakartaSans700.className} text-[14px] text-[#90A3BF] line-through mt-[-10px]`}
+                className={`${PlusJakartaSans700.className} text-[14px] text-[#90A3BF] line-through mt-[-20px]`}
               >
                 $80.00
               </div>
             </div>
 
-
-
-  {/* Card 9 */}
-  <div className="w-full p-4 bg-white rounded-lg shadow-lg">
+            {/* Card 9 */}
+            <div className="w-full p-4 bg-white rounded-lg shadow-lg">
               <div className="flex justify-between items-center mb-4">
                 <h1
                   className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}
@@ -961,28 +964,27 @@ export default function Category() {
                   </p>
                 </div>
               </div>
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between mt-9">
                 <h1
                   className={`${PlusJakartaSans700.className} text-[20px] text-[#1A202C]`}
                 >
-                  $74/ <span className="text-[14px] text-[#90A3BF]">day</span>
+                  $74.00/{" "}
+                  <span className="text-[14px] text-[#90A3BF]">day</span>
                 </h1>
                 <button
-                  className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm`}
+                  className={`${PlusJakartaSans600.className} bg-[#3563E9] text-white text-[16px] w-[116px] h-[44px] rounded-sm hover:bg-[#002fbb] transition-all duration-300`}
                 >
                   Rent Now
                 </button>
               </div>
               <div
-                className={`${PlusJakartaSans700.className} text-[14px] text-[#90A3BF] line-through mt-[-10px]`}
+                className={`${PlusJakartaSans700.className} text-[14px] text-[#90A3BF] line-through mt-[-20px]`}
               >
                 $80.00
               </div>
             </div>
-
           </div>
-
-          </div>
+        </div>
         {/* Cars Section (End) */}
       </div>
     </div>

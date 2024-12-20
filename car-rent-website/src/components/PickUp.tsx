@@ -22,8 +22,8 @@ const PickUp = () => {
       <div className="w-full xl:px-[40px] lg:pl-[60px] md:pl-[70px] px-5 grid xl:grid-cols-[1fr,100px,1fr] lg:grid-cols-[1fr,100px,1fr] md:grid-cols-[1fr,80px,1fr] grid-cols-1 py-7 mt-0">
         <div className="bg-white xl:w-full lg:w-[90%] md:w-[85%] h-[132px] rounded-lg text-[100%] lg:text-[70%]">
           <div className="px-8 py-3">
-            <input type="radio" />
-            <label htmlFor="" className="ml-2">
+            <input type="radio" id="pick" />
+            <label htmlFor="pick" className="ml-2 text-base">
               Pick-Up
             </label>
 
@@ -76,8 +76,8 @@ const PickUp = () => {
 
         <div className="rounded-lg bg-white h-[132px] xl:w-full lg:w-[90%] md:w-[85%] text-[100%] lg:text-[70%]">
           <div className="px-8 py-3">
-            <input type="radio" />
-            <label htmlFor="" className="ml-2">
+            <input type="radio" id="drop"/>
+            <label htmlFor="drop" className="ml-2 text-base">
               Drop-Off
             </label>
 
